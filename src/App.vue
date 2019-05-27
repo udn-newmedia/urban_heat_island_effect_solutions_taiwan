@@ -26,86 +26,84 @@
         </div>
       </div>
     </div>
-    <scrollVideo></scrollVideo>
-    <div class="introduction">
+    <scrollVideoWind></scrollVideoWind>
+    <div class="wind-wrapper">
       <div class="container">
         <div class="content">
-          <p>都會區建築密集、巷道狹小，導致風進不來、熱出不去，溫度愈來愈高。</p>
+          <p>為城市通風</p>
           <br>
-          <p>為了幫都市退燒，各縣市推出各式解方，包含規劃讓風走的廊道、實施綠建築獎勵等措施，要減緩熱島效應，並還給居民更舒適的居住環境。</p>
+          <p>都市建築密集、巷道狹小，導致風進不來、熱出不去，溫度愈來愈高。為了讓城市通風，新北市首創「風廊環境管制」，限制「水岸第一排」建築的最大面寬，留一條路讓風走。</p>
           <br>
-          <div class="share">
-            <i class="facebook i-facebook-1"></i><i class="line i-line"></i>
-          </div>
+          <p>新北市在2013年訂定新北市板橋江翠北側地區都市設計審議原則，限制「水岸第一排」垂直河道面的建築最大面寬僅能蓋7成，且全區建築需退縮4公尺作為人行道，即風不只進得來，更留有走廊可深入城市。</p>
+          <br>
+          <p>由於江翠北側是一整塊總計超過80公頃重畫區，有長達5,700米的水岸線，新北市城鄉局以此作為風廊示範地，目前共有19個建案。參與其中建案的建築師林秀芬表示，建築物中間有空隙，有助疏通建築物的熱能。</p>
+          <br>
+          <p>長期研究都市風廊道的林子平指出，全台目前只有新北、台南沙崙特定區有要求留20公尺廊道，面對嚴峻的都市通風問題，國土計畫以及縣市政府對應的太少，目前建築有太陽日照數管制，或許未來建築基地也可針對通風管制，公園配置狹長型，有利風流動。</p>
+          <br>
+          <p>「西側被擋住，內部就越無可救藥」，林子平說，海線是迎風第一道牆，規範要越嚴格，才能讓風順利吹向陸地，大量灌木可能會降低城市風速，因此建議行道樹選擇樹冠高一點的樹種。</p>
+          <br>
         </div>
       </div>
     </div>
-    <div class="introduction">
+    <scrollVideoGreen></scrollVideoGreen>
+    <div class="green-wrapper">
       <div class="container">
         <div class="content">
-          <p>都會區建築密集、巷道狹小，導致風進不來、熱出不去，溫度愈來愈高。</p>
+          <p>讓熱島變綠島</p>
           <br>
-          <p>為了幫都市退燒，各縣市推出各式解方，包含規劃讓風走的廊道、實施綠建築獎勵等措施，要減緩熱島效應，並還給居民更舒適的居住環境。</p>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
           <br>
-          <div class="share">
-            <i class="facebook i-facebook-1"></i><i class="line i-line"></i>
-          </div>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p> 補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
         </div>
       </div>
     </div>
-    <!-- <section class="panel cover">
-      
-    </section>
-    <section class="panel main-title">
-      <h2>當寶島變熱島</h2>
-      <h1>幫都市退燒</h1>
-    </section>
-    <section class="panel content">
+    <scrollVideoWater></scrollVideoWater>
+    <div class="water-wrapper">
       <div class="container">
-        <p>都會區建築密集、巷道狹小，導致風進不來、熱出不去，溫度愈來愈高。</p>
-        <br>
-        <p>為了幫都市退燒，各縣市推出各式解方，包含規劃讓風走的廊道、實施綠建築獎勵等措施，要減緩熱島效應，並還給居民更舒適的居住環境。</p>
-
-      </div>
-    </section>
-    <section ref="enter" class="scrollVideo">
-      <div class="sidebar" id="either-gif-or-video">
-        <video ref="video" class="video-player sidebar__inner" width="100vw" id="green" src="../public/video/green/heat_island_effect_solutions_taiwan_green.mp4" preload="metadata" autobuffer autoplay loop muted playsinline></video>
-        <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="../public/video/green/heat_island_effect_solutions_taiwan_green.mp4" webkit-playsinline="true"></source>
-        <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" src="../public/video/green/heat_island_effect_solutions_taiwan_green.mp4"></source>
-        <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="../public/video/green/heat_island_effect_solutions_taiwan_green.mp4"></source>
-      </div>
-      <div class="video-height content" :id="videoSetHeight">
-      <div class="section-wrapper">
-        <div class="section">
-          <h1>Hello1</h1>
-        </div>
-        <div class="section">
-          <h1>Hello2</h1>
-        </div>
-        <div class="section">
-          <h1>Hello3</h1>
-        </div>
-        <div class="section">
-          <h1>Hello4</h1>
+        <div class="content">
+          <p>讓熱島變綠島</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p> 補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
+          <p>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</p>
+          <br>
         </div>
       </div>
     </div>
-    </section>
-    <section class="panel content">
-      <div class="container">
-        <p>都會區建築密集、巷道狹小，導致風進不來、熱出不去，溫度愈來愈高。</p>
-        <br>
-        <p>為了幫都市退燒，各縣市推出各式解方，包含規劃讓風走的廊道、實施綠建築獎勵等措施，要減緩熱島效應，並還給居民更舒適的居住環境。</p>
-      </div>
-    </section> -->
   </div>
 </template>
 
 <script>
 import srcRWD from './mixin/srcRWD.js'
 import ScrollMagic from 'scrollmagic'
-import scrollVideo from './components/scrollVideo.vue'
+import scrollVideoWind from './components/scrollVideoWind.vue'
+import scrollVideoGreen from './components/scrollVideoGreen.vue'
+import scrollVideoWater from './components/scrollVideoWater.vue'
 
 export default {
   name: 'app',
@@ -125,7 +123,9 @@ export default {
   },
   mixins: [srcRWD],
   components: {
-    scrollVideo
+    scrollVideoWind,
+    scrollVideoGreen,
+    scrollVideoWater
   },
   mounted () {
 
@@ -144,69 +144,9 @@ export default {
 				// .addIndicators() // add indicators (requires plugin)
 				.addTo(controller);
     
-    let vm = this
-    this.vid = document.getElementById('green');
-    this.windowheight = window.innerHeight-20;
-    this.targetscrollpos = this.scrollpos
-    this.vid.pause();
-    this.vid.currentTime = 0
-     window.addEventListener('scroll', this.handleScroll);
-
-    //  this.videoPosition = this.getCoords(this.$refs['enter']).top
-
-    //  this.intervalMark = setInterval(function(){  
-        
-    //         //Accelerate towards the target:
-    //         vm.accel += (vm.targetscrollpos - vm.scrollpos)*vm.accelamount;
-            
-    //         //clamp the acceleration so that it doesnt go too fast
-    //         if (vm.accel > 1) vm.accel = 1;
-    //         if (vm.accel < -1) vm.accel = -1;
-        
-    //         //move the video scroll position according to the acceleration and how much bouncing you selected:
-    //         vm.scrollpos = (vm.scrollpos + vm.accel) * (vm.bounceamount) + (vm.targetscrollpos * (1-vm.bounceamount));
-        
-    //         //move the blue dot to a position across the side of the screen
-    //         //that indicates where the current video scroll pos is.
-    //         // vm.time.style.top = 10+(window.pageYOffset/4000*this.windowheight)  
-        
-    //         //update video playback
-    //         vm.vid.currentTime = vm.scrollpos;
-    //         vm.vid.pause();
-            
-    //     }, 40);
   },
   methods: {
-      // handleScroll () {
-      //   let currentH = window.pageYOffset
 
-      //   // and when parent change height..
-
-      //   if ( this.videoPosition < currentH && currentH < this.videoPosition + 3600) {
-      //     this.targetscrollpos = (window.pageYOffset - this.videoPosition)/350;
-      //     this.scroll.style.top = 10+(window.pageYOffset/1200*this.windowheight)
-      //   } else {
-
-      //   }
-
-      // },
-      // getCoords(elem) { // crossbrowser version
-      //     var box = elem.getBoundingClientRect();
-
-      //     var body = document.body;
-      //     var docEl = document.documentElement;
-
-      //     var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-      //     var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
-
-      //     var clientTop = docEl.clientTop || body.clientTop || 0;
-      //     var clientLeft = docEl.clientLeft || body.clientLeft || 0;
-
-      //     var top  = box.top +  scrollTop - clientTop;
-      //     var left = box.left + scrollLeft - clientLeft;
-
-      //     return { top: Math.round(top), left: Math.round(left) };
-      // }
   },
 }
 </script>

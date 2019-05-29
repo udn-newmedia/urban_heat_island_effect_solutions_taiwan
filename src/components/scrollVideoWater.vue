@@ -3,9 +3,9 @@
     <section id="videoSection3" ref="scrollVideo3">
         <div class="sidebar" id="scroll-video-content3">
           <video ref="video" class="video-player sidebar__inner" width="100vw" id="water" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" preload="metadata" autobuffer autoplay loop muted playsinline></video>
-          <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" webkit-playsinline="true"></source>
-          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )"></source>
-          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )"></source>
+          <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" webkit-playsinline="true" />
+          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" />
+          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" />
         </div>
         <div class="section">
           <h1>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</h1>
@@ -77,11 +77,20 @@ export default {
       let totalSection = this.sectionHeight - document.getElementById('scroll-video-content3').offsetHeight
       let videoEnd = document.getElementById('videoSection3').getBoundingClientRect().bottom - document.getElementById('scroll-video-content3').offsetHeight
       let currentPlay = 0
+      let scrollpos = totalSection / 600
+      let targetscrollpos = scrollpos
       let myReq = null;
       
       if ( 0  < videoEnd && videoEnd < totalSection ) {
-        currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
-        vid.currentTime = currentPlay
+
+        //version1
+        // currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
+
+        //version2
+        targetscrollpos = (6 - videoEnd / 600)
+
+        vid.currentTime = targetscrollpos
+
         myReq = window.requestAnimationFrame(vm.scrollPlay);
       } else {
         cancelAnimationFrame(myReq);

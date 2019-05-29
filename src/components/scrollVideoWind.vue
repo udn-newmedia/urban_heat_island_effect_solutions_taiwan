@@ -3,9 +3,9 @@
     <section id="videoSection" ref="scrollVideo1">
         <div class="sidebar" id="scroll-video-content1">
           <video ref="video" class="video-player sidebar__inner" width="100vw" id="wind" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )" preload="metadata" autobuffer autoplay loop muted playsinline></video>
-          <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )" webkit-playsinline="true"></source>
-          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )"></source>
-          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )"></source>
+          <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )" webkit-playsinline="true" />
+          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )" />
+          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )" />
         </div>
         <div class="section">
           <h1>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</h1>
@@ -91,18 +91,44 @@ export default {
       let myReq = null;
       
       if ( 0  < videoEnd && videoEnd < totalSection ) {
+
+        //scrollpos 8 ~ -9
+        //targetscrollpos 基本上就等於 currentTime (1 - bounceamount ) 去修飾時間，目前是 0.91 = 1 - 0.09 意思是到的時間會打九折
+        // scrollpos 是固定的總長度
+
         // currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
         
+        //targetscrollpos:  5.477005208333333
+        //accel:  -1.0076966145833333
+        //accel:  -1
+        //scrollBefore:  6.246666666666667
+        //targetBefore:  5.477005208333333
+        //scrollAfter:  5.267397135416667
+        //targetAfter:  5.477005208333333
+
+        //Target 不會變 都是在 range 裡面
         targetscrollpos = (6 - videoEnd / 600)
-        this.accel += (targetscrollpos - scrollpos)* this.accelamount;
+        // console.log('targetscrollpos: ', targetscrollpos)
+        // this.accel += (targetscrollpos - scrollpos)* this.accelamount;
 
-        console.log('accel', this.accel)
-        if (this.accel > 1) this.accel = 1;
-        if (this.accel < -1) this.accel = -1;
+        // console.log('accel: ', this.accel)
 
-        console.log('scroll: ',scrollpos)
-        console.log('target: ',targetscrollpos)
-        scrollpos = (scrollpos + this.accel) * (this.bounceamount) + (targetscrollpos * (1-this.bounceamount));
+
+        // console.log('accel', this.accel)
+        // if (this.accel > 1) this.accel = 1;
+        // if (this.accel < -1) this.accel = -1;
+
+        // console.log('accel: ', this.accel)
+        // console.log('scrollBefore: ',scrollpos)
+        // console.log('targetBefore: ',targetscrollpos)
+        // accelamount: 0.01
+        // bounceamount: 0.91
+
+        //scrollpos = (currentScroll +- 1) * 0.91 + ( 5.47 * (1 - 0.91 ))
+        // scrollpos = targetscrollpos + (targetscrollpos * (1-this.bounceamount));
+        // console.log(targetscrollpos)
+        // scrollpos = (scrollpos + this.accel) * (this.bounceamount) + (targetscrollpos * (1-this.bounceamount));
+
         //影片長0.34
         //2.7625 windows.offset/400
 
@@ -114,14 +140,18 @@ export default {
         // console.log('total:', totalSection)
         // console.log(totalSection / 600)
         // 4.44
+        // console.log('scrollAfter: ',scrollpos)
+        // console.log('targetAfter: ',targetscrollpos)
+
         
-        
-        vid.currentTime = scrollpos
+        vid.currentTime =  targetscrollpos
         // vid.currentTime = currentPlay
         myReq = window.requestAnimationFrame(vm.scrollPlay);
       } else {
         cancelAnimationFrame(myReq);
       }
+
+
       // let vm = this
       // var bodyRect = document.body.getBoundingClientRect(),
       //     elemRect = element.getBoundingClientRect(),

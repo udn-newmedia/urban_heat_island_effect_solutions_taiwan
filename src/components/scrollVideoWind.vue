@@ -36,7 +36,10 @@ export default {
       frameNumber: 0,
       playbackConst: 500,
       sectionHeight: 0,
-      videoDuration: 0
+      videoDuration: 0,
+      accelamount: 0.01,
+      bounceamount: 0.91,
+      accel: 0
     }
   },
   mounted () {
@@ -83,13 +86,38 @@ export default {
       let totalSection = this.sectionHeight - document.getElementById('scroll-video-content1').offsetHeight
       let videoEnd = document.getElementById('videoSection').getBoundingClientRect().bottom - document.getElementById('scroll-video-content1').offsetHeight
       let currentPlay = 0
+      let scrollpos = totalSection / 600
+      let targetscrollpos = scrollpos
       let myReq = null;
       
       if ( 0  < videoEnd && videoEnd < totalSection ) {
-        currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
-        console.log(this.videoDuration)
-        console.log(currentPlay)
-        vid.currentTime = currentPlay
+        // currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
+        
+        targetscrollpos = (6 - videoEnd / 600)
+        this.accel += (targetscrollpos - scrollpos)* this.accelamount;
+
+        console.log('accel', this.accel)
+        if (this.accel > 1) this.accel = 1;
+        if (this.accel < -1) this.accel = -1;
+
+        console.log('scroll: ',scrollpos)
+        console.log('target: ',targetscrollpos)
+        scrollpos = (scrollpos + this.accel) * (this.bounceamount) + (targetscrollpos * (1-this.bounceamount));
+        //影片長0.34
+        //2.7625 windows.offset/400
+
+        //影片長0.06
+
+        //2668
+        //2646.796875
+
+        // console.log('total:', totalSection)
+        // console.log(totalSection / 600)
+        // 4.44
+        
+        
+        vid.currentTime = scrollpos
+        // vid.currentTime = currentPlay
         myReq = window.requestAnimationFrame(vm.scrollPlay);
       } else {
         cancelAnimationFrame(myReq);

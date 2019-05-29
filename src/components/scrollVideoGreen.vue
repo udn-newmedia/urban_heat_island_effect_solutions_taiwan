@@ -84,6 +84,7 @@ export default {
       let myReq = null;
       
       if ( 0  < videoEnd && videoEnd < totalSection ) {
+
         currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
         vid.currentTime = currentPlay
         myReq = window.requestAnimationFrame(vm.scrollPlay);

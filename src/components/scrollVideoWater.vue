@@ -2,16 +2,35 @@
   <div class="scrollVideoWater">
     <section id="videoSection3" ref="scrollVideo3">
         <div class="sidebar" id="scroll-video-content3">
-          <video ref="video" class="video-player sidebar__inner" width="100vw" id="water" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" preload="metadata" autobuffer autoplay loop muted playsinline></video>
+          <video 
+            ref="video"
+            class="video-player sidebar__inner"
+            width="100vw"
+            id="water"
+            :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )"
+            :poster="srcRWD(require('../../public/video/water/heat_island_effect_solutions_taiwan_water_mob_1.jpg'), require('../../public/video/water/heat_island_effect_solutions_taiwan_water_1.jpg') )"
+            preload="metadata"
+            autobuffer
+            muted
+            playsinline>
+          </video>
           <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" webkit-playsinline="true" />
           <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" />
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )" />
         </div>
         <div class="section">
-          <h1>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</h1>
+          <div class="container">
+            <div class="content">
+              <h1>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</h1>
+            </div>
+          </div>
         </div>
         <div class="section">
-          <h1>熱島效應解方─水</h1>
+          <div class="container">
+            <div class="content">
+              <h1>熱島效應解方─水</h1>
+            </div>
+          </div>
         </div>
     </section>
   </div>

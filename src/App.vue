@@ -175,6 +175,8 @@ html, body {
       z-index: 10;
       padding: 0 27px;
       align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
       .title {
         background-color: #ffffff;
         font-size: 28px;

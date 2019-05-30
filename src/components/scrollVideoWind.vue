@@ -54,6 +54,8 @@
 import srcRWD from '../mixin/srcRWD.js'
 import ScrollMagic from 'scrollmagic'
 import _debounce from 'lodash.debounce'
+import TWEEN from '@tweenjs/tween.js'
+import { setTimeout } from 'timers';
 
 export default {
   name: 'scrollVideoWind',
@@ -67,7 +69,10 @@ export default {
       videoDuration: 0,
       accelamount: 0.01,
       bounceamount: 0.91,
-      accel: 0
+      accel: 0,
+      time: 0,
+      myValue: 100,
+      rqa: 0
     }
   },
   mounted () {
@@ -121,24 +126,76 @@ export default {
       let counter = 0
       targetscrollpos = (6 - videoEnd / 600)
       if ( 0  < videoEnd && videoEnd < totalSection ) {
-        myReq = window.requestAnimationFrame(function step() {
-            
-            targetscrollpos = targetscrollpos - 0.01
-            
-            if(counter < 10){
-              counter = counter + 1;
-              console.log(targetscrollpos)
-              vid.currentTime =  targetscrollpos
-              window.requestAnimationFrame(step);
-            } else {
-              counter = 0
-            }
-        })
+
+          // vm.animate();
+          vm.animate()
+          vm.time = targetscrollpos
+          
+
+        //version1
+        // currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
+
+        //version2
+        // targetscrollpos = (6 - videoEnd / 600)
+
+        // vid.currentTime = targetscrollpos
+        // myReq = window.requestAnimationFrame(vm.scrollPlay);
+
         
+        // setTimeout(function(){
+        //   targetscrollpos += 0.1
+        //   window.requestAnimationFrame(vm.scrollPlay);
+        //   console.log("targetPosition100: ",targetscrollpos)
+        // }, 100)
+
+        // setTimeout(function(){
+        //   targetscrollpos += 0.05
+        //   window.requestAnimationFrame(vm.scrollPlay);
+        //   console.log("targetPosition: ",targetscrollpos)
+        // }, 150)
+
+        // console.log("targetPosition: ",targetscrollpos)
       } else {
-        cancelAnimationFrame(myReq);
+        // cancelAnimationFrame(myReq);
       }
-    }, 50)
+    }, 50),
+    animate () {
+      let vm = this
+      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content1').offsetHeight
+      let videoEnd = document.getElementById('videoSection').getBoundingClientRect().bottom - document.getElementById('scroll-video-content1').offsetHeight
+        if ( 0  < videoEnd && videoEnd < totalSection ) {
+          setTimeout(()=>{
+            vm.rqa = requestAnimationFrame(vm.animate);
+          }, 500)
+          TWEEN.update();
+        } else {
+          cancelAnimationFrame(vm.rqa)
+        }
+        
+    }
+  },
+  watch: {
+    time: {
+      handler(newValue, oldValue) {
+        let vid = document.getElementById('wind');
+        var newStatus = newValue || 'no new value';
+        var oldStatus = oldValue || 'no old value';
+        console.log(TWEEN)
+        var tween = new TWEEN.Tween({ time: oldStatus});
+        tween
+        .to({ time: newStatus }, 1000)
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .onUpdate(function(object) {
+            console.log(object.time);
+            vid.currentTime = object.time
+        })
+        .start();
+        
+        
+      }
+    }
+  },
+  components: {
   }
 }
 </script>

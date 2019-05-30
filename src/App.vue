@@ -143,7 +143,7 @@ export default {
 				.setPin(cover, {pushFollowers: false})
 				// .addIndicators() // add indicators (requires plugin)
 				.addTo(controller);
-    
+
   },
   methods: {
 

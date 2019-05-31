@@ -54,6 +54,7 @@
 import srcRWD from '../mixin/srcRWD.js'
 import ScrollMagic from 'scrollmagic'
 import _debounce from 'lodash.debounce'
+import TWEEN from '@tweenjs/tween.js'
 
 export default {
   name: 'scrollVideGreen',
@@ -64,7 +65,13 @@ export default {
       frameNumber: 0,
       playbackConst: 500,
       sectionHeight: 0,
-      videoDuration: 0
+      videoDuration: 0,
+      accelamount: 0.01,
+      bounceamount: 0.91,
+      accel: 0,
+      time: 0,
+      myValue: 100,
+      rqa: 0
     }
   },
   mounted () {
@@ -86,8 +93,6 @@ export default {
     this.sectionHeight = document.getElementById('videoSection2').offsetHeight;
 
     window.addEventListener('scroll', vm.scrollPlay)
-    // this.videoPosition = this.$refs['scrollVideo1'].getBoundingClientRect().top
-    // var videoHeight = this.$refs['scrollVideo1'].getBoundingClientRect().height
 
     vid.pause();
 
@@ -109,33 +114,48 @@ export default {
       let totalSection = this.sectionHeight - document.getElementById('scroll-video-content2').offsetHeight
       let videoEnd = document.getElementById('videoSection2').getBoundingClientRect().bottom - document.getElementById('scroll-video-content2').offsetHeight
       let currentPlay = 0;
-      let scrollpos = totalSection / 600
-      let targetscrollpos = scrollpos
-      let myReq = null;
-      
+      let scrollpos = totalSection / 600;
+      let targetscrollpos = scrollpos;
+      let counter = 0;
+      targetscrollpos = (6 - videoEnd / 600)
       if ( 0  < videoEnd && videoEnd < totalSection ) {
-
-        //version1
-        // currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
-
-        //version2
-        targetscrollpos = (6 - videoEnd / 600)
-
-        vid.currentTime = targetscrollpos
-        myReq = window.requestAnimationFrame(vm.scrollPlay);
-        setTimeout(function(){
-          targetscrollpos += 0.1
-          window.requestAnimationFrame(vm.scrollPlay);
-        }, 100)
-        setTimeout(function(){
-          targetscrollpos += 0.05
-          window.requestAnimationFrame(vm.scrollPlay);
-        }, 150)
-      } else {
-        cancelAnimationFrame(myReq);
+          vm.moveVideo()
+          vm.time = targetscrollpos
       }
-    }, 50)
-  }
+    }, 50),
+    moveVideo () {
+      let vm = this
+      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content2').offsetHeight
+      let videoEnd = document.getElementById('videoSection2').getBoundingClientRect().bottom - document.getElementById('scroll-video-content2').offsetHeight
+        if ( 0  < videoEnd && videoEnd < totalSection ) {
+          setTimeout(()=>{
+            vm.rqa = requestAnimationFrame(vm.moveVideo);
+          }, 500)
+          TWEEN.update();
+        } else {
+          cancelAnimationFrame(vm.rqa)
+        }
+    }
+  },
+  watch: {
+    time: {
+      handler(newValue, oldValue) {
+        let vid = document.getElementById('green');
+        let newStatus = newValue || 'no new value';
+        let oldStatus = oldValue || 'no old value';
+        console.log(vid)
+        let tween = new TWEEN.Tween({ time: oldStatus});
+        tween
+        .to({ time: newStatus }, 1000)
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .onUpdate(function(object) {
+            console.log(object.time);
+            vid.currentTime = object.time
+        })
+        .start();
+      }
+    }
+  },
 }
 </script>
 

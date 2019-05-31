@@ -116,72 +116,38 @@ export default {
     scrollPlay:  _debounce(function(){
       let vm = this
       let vid = document.getElementById('wind');
-
-      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content1').offsetHeight
-      let videoEnd = document.getElementById('videoSection').getBoundingClientRect().bottom - document.getElementById('scroll-video-content1').offsetHeight
-      let currentPlay = 0
-      let scrollpos = totalSection / 600
-      let targetscrollpos = scrollpos
-      let myReq = null;
-      let counter = 0
+      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content1').offsetHeight;
+      let videoEnd = document.getElementById('videoSection').getBoundingClientRect().bottom - document.getElementById('scroll-video-content1').offsetHeight;
+      let scrollpos = totalSection / 600;
+      let targetscrollpos = scrollpos;
+      let counter = 0;
       targetscrollpos = (6 - videoEnd / 600)
       if ( 0  < videoEnd && videoEnd < totalSection ) {
-
-          // vm.animate();
-          vm.animate()
+          vm.moveVideo()
           vm.time = targetscrollpos
-          
-
-        //version1
-        // currentPlay = (1 - (videoEnd/totalSection))*this.videoDuration
-
-        //version2
-        // targetscrollpos = (6 - videoEnd / 600)
-
-        // vid.currentTime = targetscrollpos
-        // myReq = window.requestAnimationFrame(vm.scrollPlay);
-
-        
-        // setTimeout(function(){
-        //   targetscrollpos += 0.1
-        //   window.requestAnimationFrame(vm.scrollPlay);
-        //   console.log("targetPosition100: ",targetscrollpos)
-        // }, 100)
-
-        // setTimeout(function(){
-        //   targetscrollpos += 0.05
-        //   window.requestAnimationFrame(vm.scrollPlay);
-        //   console.log("targetPosition: ",targetscrollpos)
-        // }, 150)
-
-        // console.log("targetPosition: ",targetscrollpos)
-      } else {
-        // cancelAnimationFrame(myReq);
       }
     }, 50),
-    animate () {
+    moveVideo () {
       let vm = this
       let totalSection = this.sectionHeight - document.getElementById('scroll-video-content1').offsetHeight
       let videoEnd = document.getElementById('videoSection').getBoundingClientRect().bottom - document.getElementById('scroll-video-content1').offsetHeight
         if ( 0  < videoEnd && videoEnd < totalSection ) {
           setTimeout(()=>{
-            vm.rqa = requestAnimationFrame(vm.animate);
+            vm.rqa = requestAnimationFrame(vm.moveVideo);
           }, 500)
           TWEEN.update();
         } else {
           cancelAnimationFrame(vm.rqa)
         }
-        
     }
   },
   watch: {
     time: {
       handler(newValue, oldValue) {
         let vid = document.getElementById('wind');
-        var newStatus = newValue || 'no new value';
-        var oldStatus = oldValue || 'no old value';
-        console.log(TWEEN)
-        var tween = new TWEEN.Tween({ time: oldStatus});
+        let newStatus = newValue || 'no new value';
+        let oldStatus = oldValue || 'no old value';
+        let tween = new TWEEN.Tween({ time: oldStatus});
         tween
         .to({ time: newStatus }, 1000)
         .easing(TWEEN.Easing.Quadratic.Out)
@@ -190,8 +156,6 @@ export default {
             vid.currentTime = object.time
         })
         .start();
-        
-        
       }
     }
   },

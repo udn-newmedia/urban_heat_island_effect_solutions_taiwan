@@ -14,8 +14,8 @@
             muted
             playsinline>
             </video>
-          <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(require('../../public/video/green/' + videoMob2), require('../../public/video/green/' + video1) )" webkit-playsinline="true" />
-          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(require('../../public/video/green/' + videoMob2), require('../../public/video/green/' + video1) )" />
+          <!-- <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(require('../../public/video/green/' + videoMob2), require('../../public/video/green/' + video1) )" webkit-playsinline="true" />
+          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(require('../../public/video/green/' + videoMob2), require('../../public/video/green/' + video1) )" /> -->
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(require('../../public/video/green/' + videoMob2), require('../../public/video/green/' + video1) )" />
         </div>
         <div class="section">

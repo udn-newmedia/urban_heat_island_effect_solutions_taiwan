@@ -21,14 +21,27 @@
         <div class="section">
           <div class="container">
             <div class="content">
-              <h1>補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文補文。</h1>
+              <div class="quote">
+                <slot name="quote1"></slot>
+              </div>
             </div>
           </div>
         </div>
         <div class="section">
           <div class="container">
             <div class="content">
-              <h1>熱島效應解方─水</h1>
+              <div class="quote">
+                <slot name="quote2"></slot>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="container">
+            <div class="content">
+              <div class="quote-title">
+                <slot name="quote-title"></slot>
+              </div>
             </div>
           </div>
         </div>
@@ -69,7 +82,7 @@ export default {
     new ScrollMagic.Scene({
           triggerElement: videoBackground,
           triggerHook: 'onLeave',
-          duration: "200%"
+          duration: "300%"
 				})
 				.setPin(videoBackground, {pushFollowers: false})
 				// .addIndicators() // add indicators (requires plugin)
@@ -135,7 +148,7 @@ export default {
         let oldStatus = oldValue || 'no old value';
         let tween = new TWEEN.Tween({ time: oldStatus});
         tween
-        .to({ time: newStatus }, 1000)
+        .to({ time: newStatus }, 1500)
         .easing(TWEEN.Easing.Quadratic.Out)
         .onUpdate(function(object) {
             console.log(object.time);

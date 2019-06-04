@@ -2,8 +2,10 @@ import Vue from 'vue'
 import VueMq from 'vue-mq'
 import App from './App.vue'
 import store from './store'
+import globalComponents from '@/plugins/baseComponents.js'
 
 Vue.config.productionTip = false
+Vue.use(globalComponents)
 
 //Vue.prototype.$appName = 'My App'
 

@@ -1,15 +1,25 @@
 <template>
   <div id="app">
+    <Indicator></Indicator>
+    <Head-Bar head-color="#fff" icon-color="#000">
+      <!-- <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
+      <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
+      <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a> -->
+      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
+      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
+      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a>
+    </Head-Bar>
     <div class="cover">
-      <div class="cover-background">
-        <img :src="srcRWD(require('../public/images/' + coverImgMob1), require('../public/images/' + coverImg1))" alt="">
-      </div>
       <div class="cover-content-wrapper">
         <div class="cover-content">
-          <p class="subtitle">
-            <span class="subtitle-background">當寶島變熱島</span>
-          </p>
-          <p class="title">幫都市退燒</p>
+          <div class="subtitle-background">
+            <p class="subtitle">
+              當寶島變熱島
+            </p>
+            <p class="title">
+              幫都市退燒
+            </p>
+          </div>
         </div>  
       </div>
     </div>
@@ -21,16 +31,29 @@
           <p>為了幫都市退燒，各縣市推出各式解方，包含規劃讓風走的廊道、實施綠建築獎勵等措施，要減緩熱島效應，並還給居民更舒適的居住環境。</p>
           <br>
           <div class="share">
-            <i class="facebook i-facebook-1"></i><i class="line i-line"></i>
+            <i  @click="FacebookShare(facebookUrl)" class="facebook i-facebook-1"></i>
+            <i  @click="LineShare(lineUrl)" class="line i-line" ></i>
           </div>
         </div>
       </div>
     </div>
-    <scrollVideoWind></scrollVideoWind>
-    <div class="wind-wrapper">
+
+    <scrollVideoWind>
+      <div slot="quote1">
+         <p>都市溫度愈來愈高，不斷興建的高樓擋住風的去路，讓熱無法散去。</p>
+      </div>
+      <div slot="quote2">
+         <p>新北市藉由風廊道的設計，讓河面涼爽的風從5,700米的水岸吹進板橋江翠北側重劃區，為都市降溫、改善熱島效應。</p>
+      </div>
+      <div slot="quote-title">
+         <div>熱島效應解方─風</div>
+      </div>
+    </scrollVideoWind>
+
+    <div class="wind-wrapper paragraph">
       <div class="container">
         <div class="content">
-          <h3>留一條路讓風走</h3>
+          <h3 class="wind-title paragraph-title">留一條路讓風走</h3>
           <br>
           <p>為了讓涼爽的風能夠吹進都會區，新北市首創「風廊環境管制」，限制「水岸第一排」建築的最大面寬，留一條路讓風走。</p>
           <br>
@@ -54,11 +77,23 @@
         </div>
       </div>
     </div>
-    <scrollVideoGreen></scrollVideoGreen>
-    <div class="green-wrapper">
+
+    <scrollVideoGreen>
+      <div slot="quote1">
+         <p>每到夏日，涼爽的林蔭大道下總是擠滿乘涼的民眾。</p>
+      </div>
+      <div slot="quote2">
+         <p>樹只要長得好，不僅能為民眾遮蔭，還能發揮「綠」島功效，為城市降溫。</p>
+      </div>
+      <div slot="quote-title">
+         <div>熱島效應解方─綠</div>
+      </div>
+    </scrollVideoGreen>
+
+    <div class="green-wrapper paragraph">
       <div class="container">
         <div class="content">
-          <h3>讓熱島變綠島</h3>
+          <h3 class="green-title paragraph-title">讓熱島變綠島</h3>
           <br>
           <p>都市正在發燒，綠色植栽就像帖退燒藥，為城市帶來降溫效果。但台灣六都綠覆率不僅低於法定門檻10%，除高雄市外，其餘各都連5%都達不到，加上行道樹問題叢生，難怪都會區不斷飆高溫。學者呼籲政府妥善規劃都會區綠地及行道樹，讓樹長得好、長得大，才能發揮都市「綠」島的功效。</p>
           <br>
@@ -76,11 +111,24 @@
         </div>
       </div>
     </div>
-    <scrollVideoWater></scrollVideoWater>
-    <div class="water-wrapper">
+
+    <scrollVideoWater>
+      <div slot="quote1">
+         <p>夏天高溫時，民眾懂得戲水消暑。</p>
+      </div>
+      <div slot="quote2">
+         <p>那麼如果能把溪流的水引入都市中，是不是也能讓都市戲水消暑，帶走大量的熱？</p>
+      </div>
+      <div slot="quote-title">
+         <div>熱島效應解方─水</div>
+      </div>
+    </scrollVideoWater>
+
+
+    <div class="water-wrapper paragraph">
       <div class="container">
         <div class="content">
-          <h3>用水廊為都市降溫</h3>
+          <h3 class="water-title paragraph-title">用水廊為都市降溫</h3>
           <br>
           <p>若以基礎物理觀念「水在蒸發過程中會吸收周圍的熱量」出發，保留水體、營造水廊，成為降低都市熱島效應的有效途徑。</p>
           <br>
@@ -96,12 +144,120 @@
         </div>
       </div>
     </div>
+
+    <div class="end">
+      <div id="end-background-video">
+        <video ref="end-background-video" width="100vw" preload="metadata" :src="srcRWD(endBackgroundVideoMob, endBackgroundVideo)" autobuffer autoplay loop muted playsinline>
+          <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(endBackgroundVideoMob, endBackgroundVideo)" webkit-playsinline="true"></source>
+          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(endBackgroundVideoMob, endBackgroundVideo)"></source>
+          <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(endBackgroundVideoMob, endBackgroundVideo)"></source>
+        </video>
+      </div>
+      <div class="ending">
+        <div class="content">
+          <div class="container"> 
+            <div class="end-report">
+              <p class="end-report-title">
+                <span class="end-report-title-mark">當寶島變熱島</span>系列專題
+              </p>
+              <div class="end-report-related-first-layer">
+                <div class="left">
+                  <div class="box">
+                    <a href="">
+                      <img src="../public/images/relate/relate_2.jpg" alt="">
+                      <div class="describe">
+                        <p>幫都市退燒</p>
+                      </div> 
+                    </a>           
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="box">
+                    <a href="">
+                      <img src="../public/images/relate/relate_3.jpg" alt="">
+                      <div class="describe">
+                        <p>新加坡用綠化降溫</p>
+                      </div>
+                    </a>         
+                  </div>
+                </div>
+              </div>
+              <div class="end-report-related-sec-layer">
+                <div class="left">
+                  <div class="box">
+                    <a href="https://udn.com/news/story/11319/3302778">
+                      <img src="../public/images/relate/relate_4.jpg" alt="">
+                      <div class="describe">
+                        <p>勞工高溫休息於法有據 醫籲落實勞檢</p>
+                      </div>
+                    </a>
+                  </div>
+                    <div class="box">
+                    <a href="https://udn.com/news/story/11321/3283436">
+                      <img src="../public/images/relate/relate_5.jpg" alt="">
+                      <div class="describe">
+                        <p>聯合筆記／走路有風的城市</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="box">
+                    <a href="https://udn.com/news/story/7323/3787399">
+                      <img src="../public/images/relate/relate_6.jpg" alt="">
+                      <div class="describe">
+                        <p>減緩短暫強降雨致災情況 公私合作打造新北海綿城市</p>
+                      </div>
+                    </a>   
+                  </div>
+                  <div class="box">
+                    <a href="https://vision.udn.com/vision/story/12840/3829036">
+                      <img src="../public/images/relate/relate_7.jpg" alt="">
+                      <div class="describe">
+                        <p>超「綠」辦公樓 出差要買碳排費</p>
+                      </div>
+                    </a>   
+                  </div>
+                </div>
+              </div>
+            </div>
+            <share></share>
+            <br>
+            <editor>
+              <div>採訪團隊：鄭朝陽、洪敬浤、徐如宜、鄭維真、張裕珍、魏翊庭</div>
+              <div>影像：王騰毅、林澔一、杜建重、黃仲裕、報系資料照</div>
+              <div>製作人：謝汶均</div>
+              <div>視覺設計：許瑋琳</div>
+              <div>網頁製作：胡凈悟</div>
+              <div>監製：林秀姿、董谷音、潘如瑩</div>
+              <div>2019.06.18</div>
+            </editor>
+            <br>
+            <logo></logo>
+            <br>
+            <Question href="https://www.surveycake.com/s/KpQKN" text="填寫閱讀體驗問卷"></Question>
+          </div>
+        </div>
+      </div>   
+    </div>
+
+    <div class="footer">
+        <div class="share">
+          <div class="content">
+            <div class="container">
+              <fb-comment  href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect/"></fb-comment>
+            </div>
+          </div>
+        </div>
+    </div>
+    
   </div>
 </template>
 
 <script>
 import srcRWD from './mixin/srcRWD.js'
 import ScrollMagic from 'scrollmagic'
+import Utils from 'udn-newmedia-utils'
 import scrollVideoWind from './components/scrollVideoWind.vue'
 import scrollVideoGreen from './components/scrollVideoGreen.vue'
 import scrollVideoWater from './components/scrollVideoWater.vue'
@@ -119,7 +275,11 @@ export default {
       accelamount: 0.01,
       bounceamount: 0,
       intervalMark: 0,
-      videoPosition: 0
+      videoPosition: 0,
+      endBackgroundVideo: require('../public/video/end/heat_island_effect_solutions_taiwan_end.mp4'),
+      endBackgroundVideoMob: require('../public/video/end/heat_island_effect_solutions_taiwan_end_mob.mp4'),
+      lineUrl: 'http://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan/',
+      facebookUrl: 'http://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan/'
     }
   },
   mixins: [srcRWD],
@@ -131,19 +291,32 @@ export default {
   mounted () {
 
 
-    var controller = new ScrollMagic.Controller({});
+    // var controller = new ScrollMagic.Controller({});
     
 		// get all slides
-    var cover = document.querySelector(".cover-background");
+    // var cover = document.querySelector(".cover-background");
+
+    // new ScrollMagic.Scene({
+    //       triggerElement: cover,
+    //       triggerHook: 'onLeave',
+    //       duration: "100%"
+		// 		})
+		// 		.setPin(cover, {pushFollowers: false})
+		// 		// .addIndicators() // add indicators (requires plugin)
+    // 		.addTo(controller);
+    
+    
+    var end = document.querySelector("#end-background-video");
+    var controller = new ScrollMagic.Controller();
 
     new ScrollMagic.Scene({
-          triggerElement: cover,
-          triggerHook: 'onLeave',
-          duration: "100%"
-				})
-				.setPin(cover, {pushFollowers: false})
-				// .addIndicators() // add indicators (requires plugin)
-				.addTo(controller);
+        triggerElement: end,
+        triggerHook: 'onLeave',
+        duration: "500%"
+      })
+      .setPin(end, {pushFollowers: false})
+      // .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
     
     (function() {
     var lastTime = 0;
@@ -174,7 +347,50 @@ export default {
     }());
   },
   methods: {
-
+    LineShare (href) {
+      ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "Line Share",
+        "eventAction": "click",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [line share]"
+      })
+      if (Utils.detectMob()) {
+        // 手機
+        window.open("//line.me/R/msg/text/?" + document.querySelector('title').innerHTML + "%0D%0A%0D%0A" + document.querySelector('meta[property="og:description"]').content + "%0D%0A%0D%0A" + href)
+      } else {
+        window.open("https://lineit.line.me/share/ui?url=" + href)
+      }
+    },
+    FacebookShare (href) {
+      ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": "Facebook Share",
+        "eventAction": "click",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [facebook share]"
+      })
+      FB.ui(
+        {
+          method: 'share_open_graph',
+          action_type: 'og.shares',
+          action_properties: JSON.stringify({
+            object: {
+              'og:url': href,
+              'og:title': '你是網路「透明人」嗎？測驗你的隱私危險指數',
+              'og:description': '台灣人愛滑臉書、下載App，卻不知道自己的隱私可能已經悄悄外洩，在網路世界中宛如透明人。你的個資保護夠安全嗎？快透過小測驗評估你的隱私危險指數。',
+              'og:image': 'https://udn.com/upf/newmedia/2019_data/digital_privacy/quiz/meta/meta_quiz.jpg'
+            }
+          })
+        },
+        // callback
+        function(response) {
+          if (response && !response.error_message) {
+            console.log(response);
+          } else {
+            console.log(response.error_message);
+          }
+        }
+      );
+    },
   },
 }
 </script>
@@ -189,94 +405,227 @@ html, body {
   margin: 0;
 }
 #app {
+
+  .paragraph {
+    padding: 148px 0;
+    .paragraph-title {
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+  
+
   .cover {
-    .cover-background {
-      height: 100vh;
-      img {
-        width: 100%;
-      }
+    position: relative;
+    background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg_mob.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 200vh;
+    @media screen and (min-width: 321px) and (max-width: 520px) {
+      
+    }
+    @media screen and (min-width: 521px) and (max-width: 768px) {
+      
+    }
+    @media screen and (min-width: 769px) {
+      background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg.jpg');
     }
     .cover-content-wrapper {
+      width: 100%;
       height: 100vh;
-      position: relative;
-      display: flex;
+      position: absolute;
+      bottom: 0;
       z-index: 10;
-      padding: 0 27px;
-      align-items: center;
-      max-width: 960px;
-      margin: 0 auto;
-      .title {
-        background-color: #ffffff;
-        font-size: 28px;
-        font-weight: bold;
-        padding: 5px 20px 5px 16px; 
-      }
-      .subtitle {
+      // margin: 0 27px;
+      .cover-content {
+        margin: 0 auto;
+        max-width: 960px;
+        display: flex;
         .subtitle-background {
           background-color: #ffffff;
           padding: 0px 20px 0px 16px; 
+          .title {
+            font-size: 28px;
+            font-weight: bold;
+          }
+          .subtitle {     
+            margin-bottom: -5px;
+          }
         } 
-        margin-bottom: -5px;
       }
     }
   }
   .introduction {
-      position: relative;
-      z-index: 100;
-      background-color: #f2f2f2;
-      padding-top: 154px;
-      .share {
-        padding: 93.8px 0 181px 0;
-        text-align: center;
-        font-size: 37px;
+    padding-top: 154px;
+    .share {
+      padding: 93.8px 0 181px 0;
+      text-align: center;
+      font-size: 37px;
+      color: #535353;
+    }
+  }
+  .end {
+    position: relative;
+    background-color:white;
+    z-index: 100;
+    #end-background-video {
+      video {
+        width: 100%;
+        height: 100vh;
+        object-fit: fill;
       }
     }
+    .box {
+      padding: 12px 0 34px;
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+          @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+          }
+          @media screen and (min-width: 521px) and (max-width: 768px) {
+            padding: 10px;
+          }
+          @media screen and (min-width: 769px) {
+            padding: 10px;
+          }
+        }
+        img {
+          float: right;
+          width: 100%;
+          padding-bottom: 9.4px;
+          @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+          }
+          @media screen and (min-width: 521px) and (max-width: 768px) {      
+            width: 100%;
+            float: none;
+          }
+          @media screen and (min-width: 769px) {
+            width: 100%;
+            float: none;
+          }
+        }
+        .describe {
+          float: left;
+          @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+          }
+          @media screen and (min-width: 521px) and (max-width: 768px) {
 
-
-  // .panel {
-	// 	width: 100%;
-	// }
-  // .cover {
-  //   height: 100vh;
-  //   background: url("../public/images/heat_island_effect_solutions_taiwan_bg.jpg") no-repeat;
-  // }
-  // .main-title {
-  //   height: 100vh;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   flex-direction: column;
-  // }
-  // .content {
-  //   background-color: white;
-  //   min-height: 100vh;
-
-  // }
-  // .scrollVideo {
-  //   position: relative;
-  //   .video-height {
-  //       display: block;
-  //       height: 4000px;
-  //   }
-  //   .video-player {
-  //       position: absolute;
-  //       width: 100%;
-  //       height: 100vh;
-  //       object-fit: fill;
-  //   }
-  //   .section-wrapper {
-  //     width: 100%;
-  //     color: white;
-  //     position: absolute;
-  //     .section {
-  //       height: 100vh;
-  //       z-index: 100;
+            float: none;
+          }
+          @media screen and (min-width: 769px) {
+            float: none;
+          }
+        }
         
-  //       display: flex;
-  //       justify-content: center;
-  //       align-items: center;
-  //     }
-  //   }
-  // }
+     }
+    .ending {
+      // border: solid 1.5em rgba(white);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 32%, rgba(33, 33, 33, 0.85) 74%, rgba(0, 0, 0, 0.3));
+      position: relative;
+      z-index: 110;
+      color: white;
+      padding: 500px 0 450px;
+      .end-report {
+        .end-report-title {
+          font-size: 15px;
+          padding-bottom: 10px;
+          border-bottom: solid 2px #7d7d7d;
+          .end-report-title-mark {
+            background-color:#ff0000;
+            padding-right: 5px;
+          }
+        }
+        .end-report-related-first-layer, .end-report-related-sec-layer {
+          @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+          }
+          @media screen and (min-width: 521px) and (max-width: 768px) {
+            display: flex; 
+          }
+          @media screen and (min-width: 769px) {
+            display: flex;
+          }
+
+          .left, .right {
+            @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+            }
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+              width: 50%;
+              
+            }
+            @media screen and (min-width: 769px) {
+              width: 50%;
+            }   
+          }
+          .left {
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+              padding-right: 12px;
+              
+            }
+            @media screen and (min-width: 769px) {
+              padding-right: 12px;
+            }
+          }
+        }
+        .end-report-related-sec-layer {
+          .left, .right {
+            @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+            }
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+              display: flex;
+              
+            }
+            @media screen and (min-width: 769px) {
+              display: flex;
+            }
+            .box {
+              @media screen and (min-width: 321px) and (max-width: 520px) {
+              
+              }
+              @media screen and (min-width: 521px) and (max-width: 768px) {
+                width: 50%;
+                
+              }
+              @media screen and (min-width: 769px) {
+                width: 50%;
+              }
+              &:first-child {
+                @media screen and (min-width: 321px) and (max-width: 520px) {
+              
+                }
+                @media screen and (min-width: 521px) and (max-width: 768px) {
+                  padding-right: 12px;
+                  
+                }
+                @media screen and (min-width: 769px) {
+                  padding-right: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .share {
+        background-color: white;
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    z-index: 120;
+    padding: 15px 0;
+  }
 }
 </style>

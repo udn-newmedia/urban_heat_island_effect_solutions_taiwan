@@ -61,6 +61,8 @@ export default {
     return {
       video1: 'heat_island_effect_solutions_taiwan_green.mp4',
       videoMob2: 'heat_island_effect_solutions_taiwan_green_mob.mp4',
+      totalSection: 0,
+      fps: 30,
       frameNumber: 0,
       playbackConst: 500,
       sectionHeight: 0,
@@ -90,6 +92,7 @@ export default {
     
     //抓取整個 scroll video component 的高度
     this.sectionHeight = document.getElementById('videoSection2').offsetHeight;
+    this.totalSection = this.sectionHeight - document.getElementById('scroll-video-content2').offsetHeight
 
     window.addEventListener('scroll', vm.scrollPlay)
 
@@ -110,26 +113,23 @@ export default {
     scrollPlay: _debounce(function(){
       let vm = this
       let vid = document.getElementById('green');
-      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content2').offsetHeight
       let videoEnd = document.getElementById('videoSection2').getBoundingClientRect().bottom - document.getElementById('scroll-video-content2').offsetHeight
       let currentPlay = 0;
-      let scrollpos = totalSection / 600;
-      let targetscrollpos = scrollpos;
-      let counter = 0;
-      targetscrollpos = (6 - videoEnd / 600)
-      if ( 0  < videoEnd && videoEnd < totalSection ) {
-          vm.moveVideo()
+      // let scrollpos = totalSection / 600;
+      // let targetscrollpos = scrollpos;
+      // let counter = 0;
+      let targetscrollpos = (6 - videoEnd / 600)
+      if ( 0  < videoEnd && videoEnd < this.totalSection ) {
+          vm.moveVideo(videoEnd)
           vm.time = targetscrollpos
       }
     }, 50),
-    moveVideo () {
+    moveVideo (target) {
       let vm = this
-      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content2').offsetHeight
-      let videoEnd = document.getElementById('videoSection2').getBoundingClientRect().bottom - document.getElementById('scroll-video-content2').offsetHeight
-        if ( 0  < videoEnd && videoEnd < totalSection ) {
+        if ( 0  < target && target < this.totalSection ) {
           setTimeout(()=>{
             vm.rqa = requestAnimationFrame(vm.moveVideo);
-          }, 500)
+          }, 1000/ this.fps)
           TWEEN.update();
         } else {
           cancelAnimationFrame(vm.rqa)

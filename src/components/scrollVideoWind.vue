@@ -80,6 +80,7 @@ export default {
     let controller = new ScrollMagic.Controller({});
     let vid = document.getElementById('wind');
     
+    
     new ScrollMagic.Scene({
           triggerElement: videoBackground,
           triggerHook: 'onLeave',
@@ -91,8 +92,7 @@ export default {
     
     //抓取整個 scroll video component 的高度
     this.sectionHeight = document.getElementById('videoSection').offsetHeight;
-
-    
+    this.totalSection = this.sectionHeight - document.getElementById('scroll-video-content1').offsetHeight;
 
     window.addEventListener('scroll', vm.scrollPlay)
     // this.videoPosition = this.$refs['scrollVideo1'].getBoundingClientRect().top
@@ -113,31 +113,29 @@ export default {
   },
   methods: {
     scrollPlay:  _debounce(function(){
+      //1600*900
       let vm = this
       let vid = document.getElementById('wind');
-      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content1').offsetHeight;
+      
       let videoEnd = document.getElementById('videoSection').getBoundingClientRect().bottom - document.getElementById('scroll-video-content1').offsetHeight;
-      let scrollpos = totalSection / 600;
-      let targetscrollpos = scrollpos;
-      let counter = 0;
-      targetscrollpos = (6 - videoEnd / 600)
-      if ( 0  < videoEnd && videoEnd < totalSection ) {
-          vm.moveVideo()
+      // let scrollpos = totalSection / 600;
+      // let targetscrollpos = scrollpos;
+      // let counter = 0;
+      let targetscrollpos = (6 - videoEnd / 600)
+      if ( 0  < videoEnd && videoEnd < this.totalSection ) {
+          vm.moveVideo(videoEnd)
           vm.time = targetscrollpos
       }
     }, 50),
-    moveVideo () {
+    moveVideo (target) {
       let vm = this
-      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content1').offsetHeight
-      let videoEnd = document.getElementById('videoSection').getBoundingClientRect().bottom - document.getElementById('scroll-video-content1').offsetHeight
-        if ( 0  < videoEnd && videoEnd < totalSection ) {
-          setTimeout(()=>{
-            vm.rqa = requestAnimationFrame(vm.moveVideo);
-          }, 500)
-          TWEEN.update();
-        } else {
-          cancelAnimationFrame(vm.rqa)
-        }
+      setTimeout(()=>{
+        vm.rqa = requestAnimationFrame(vm.moveVideo);
+      }, 500)
+      TWEEN.update();
+      if ( 0  >= target || target >= this.totalSection ) {
+        cancelAnimationFrame(vm.rqa)
+      }
     }
   },
   watch: {

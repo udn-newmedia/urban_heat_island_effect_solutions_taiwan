@@ -62,6 +62,7 @@ export default {
       video1: 'heat_island_effect_solutions_taiwan_water.mp4',
       videoMob3: 'heat_island_effect_solutions_taiwan_water_mob.mp4',
       frameNumber: 0,
+      totalSection:0,
       playbackConst: 500,
       sectionHeight: 0,
       videoDuration: 0,
@@ -90,6 +91,7 @@ export default {
     
     //抓取整個 scroll video component 的高度
     this.sectionHeight = document.getElementById('videoSection3').offsetHeight;
+    this.totalSection = this.sectionHeight - document.getElementById('scroll-video-content3').offsetHeight
 
     
 
@@ -114,23 +116,20 @@ export default {
     scrollPlay: _debounce(function(){
       let vm = this
       let vid = document.getElementById('water');
-      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content3').offsetHeight
       let videoEnd = document.getElementById('videoSection3').getBoundingClientRect().bottom - document.getElementById('scroll-video-content3').offsetHeight
       let currentPlay = 0
-      let scrollpos = totalSection / 600;
-      let targetscrollpos = scrollpos;
-      let counter = 0;
-      targetscrollpos = (6 - videoEnd / 600)
-      if ( 0  < videoEnd && videoEnd < totalSection ) {
-          vm.moveVideo()
+      // let scrollpos = totalSection / 600;
+      // let targetscrollpos = scrollpos;
+      // let counter = 0;
+      let targetscrollpos = (6 - videoEnd / 600)
+      if ( 0  < videoEnd && videoEnd < this.totalSection ) {
+          vm.moveVideo(videoEnd)
           vm.time = targetscrollpos
       }
     }, 50),
-    moveVideo () {
+    moveVideo (target) {
       let vm = this
-      let totalSection = this.sectionHeight - document.getElementById('scroll-video-content3').offsetHeight
-      let videoEnd = document.getElementById('videoSection3').getBoundingClientRect().bottom - document.getElementById('scroll-video-content3').offsetHeight
-        if ( 0  < videoEnd && videoEnd < totalSection ) {
+        if ( 0  < target && target < this.totalSection ) {
           setTimeout(()=>{
             vm.rqa = requestAnimationFrame(vm.moveVideo);
           }, 500)

@@ -5,9 +5,9 @@
       <!-- <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
       <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
       <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a> -->
-      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
-      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
-      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a>
+      <a @click="handleGA('menu bar_main', 'M1_main')" href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
+      <a @click="handleGA('menu bar_main', 'M2_main')" href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
+      <a @click="handleGA('menu bar_main', 'M3_main')" href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a>
     </Head-Bar>
     <div class="cover">
       <div class="cover-content-wrapper">
@@ -174,17 +174,17 @@
               <div class="end-report-related-first-layer">
                 <div class="left">
                   <div class="box">
-                    <a href="">
+                    <a  @click="handleGA('Related_main', 'R1_main')"  href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect">
                       <img src="../public/images/relate/relate_2.jpg" alt="">
                       <div class="describe">
-                        <p>幫都市退燒</p>
+                        <p>高溫會殺人</p>
                       </div> 
                     </a>           
                   </div>
                 </div>
                 <div class="right">
                   <div class="box">
-                    <a href="">
+                    <a @click="handleGA('Related_main', 'R2_main')" href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">
                       <img src="../public/images/relate/relate_3.jpg" alt="">
                       <div class="describe">
                         <p>新加坡用綠化降溫</p>
@@ -196,7 +196,7 @@
               <div class="end-report-related-sec-layer">
                 <div class="left">
                   <div class="box">
-                    <a href="https://udn.com/news/story/11319/3302778">
+                    <a @click="handleGA('Related_main', 'R3_main')" href="https://udn.com/news/story/11319/3302778">
                       <img src="../public/images/relate/relate_4.jpg" alt="">
                       <div class="describe">
                         <p>勞工高溫休息於法有據 醫籲落實勞檢</p>
@@ -204,7 +204,7 @@
                     </a>
                   </div>
                     <div class="box">
-                    <a href="https://udn.com/news/story/11321/3283436">
+                    <a @click="handleGA('Related_main', 'R4_main')"  href="https://udn.com/news/story/11321/3283436">
                       <img src="../public/images/relate/relate_5.jpg" alt="">
                       <div class="describe">
                         <p>聯合筆記／走路有風的城市</p>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="right">
                   <div class="box">
-                    <a href="https://udn.com/news/story/7323/3787399">
+                    <a @click="handleGA('Related_main', 'R5_main')" href="https://udn.com/news/story/7323/3787399">
                       <img src="../public/images/relate/relate_6.jpg" alt="">
                       <div class="describe">
                         <p>減緩短暫強降雨致災情況 公私合作打造新北海綿城市</p>
@@ -222,7 +222,7 @@
                     </a>   
                   </div>
                   <div class="box">
-                    <a href="https://vision.udn.com/vision/story/12840/3829036">
+                    <a @click="handleGA('Related_main', 'R6_main')" href="https://vision.udn.com/vision/story/12840/3829036">
                       <img src="../public/images/relate/relate_7.jpg" alt="">
                       <div class="describe">
                         <p>超「綠」辦公樓 出差要買碳排費</p>
@@ -358,6 +358,14 @@ export default {
     }());
   },
   methods: {
+    handleGA (category, tagName) {
+      ga("newmedia.send", {
+        "hitType": "event",
+        "eventCategory": category,
+        "eventAction": "Click_TW",
+        "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [ " + tagName + " ]"
+      })
+    },
     LineShare (href) {
       ga("newmedia.send", {
         "hitType": "event",

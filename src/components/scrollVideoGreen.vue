@@ -126,7 +126,7 @@ export default {
     }, 50),
     moveVideo (target) {
       let vm = this
-        if ( 0  < target && target < this.totalSection ) {
+        if (  -100  < target && target < this.totalSection + 100 ) {
           setTimeout(()=>{
             vm.rqa = requestAnimationFrame(vm.moveVideo);
           }, 1000/ this.fps)

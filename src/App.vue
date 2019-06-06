@@ -174,17 +174,17 @@
               <div class="end-report-related-first-layer">
                 <div class="left">
                   <div class="box">
-                    <a href="">
-                      <img src="../public/images/relate/relate_2.jpg" alt="">
+                    <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect/">
+                      <img src="../public/images/relate/relate_1.jpg" alt="">
                       <div class="describe">
-                        <p>幫都市退燒</p>
+                        <p>高溫會殺人</p>
                       </div> 
                     </a>           
                   </div>
                 </div>
                 <div class="right">
                   <div class="box">
-                    <a href="">
+                    <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad/">
                       <img src="../public/images/relate/relate_3.jpg" alt="">
                       <div class="describe">
                         <p>新加坡用綠化降溫</p>
@@ -412,6 +412,10 @@ export default {
 @import './assets/baseSCSS/theme.scss';
 // @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
 }
@@ -459,9 +463,29 @@ html, body {
           .title {
             font-size: 28px;
             font-weight: bold;
+            @media screen and (min-width: 321px) and (max-width: 520px) {
+      
+            }
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+              
+            }
+            @media screen and (min-width: 769px) {
+              font-size: 40px;
+              padding: 3px 16px;
+            }
           }
           .subtitle {     
             margin-bottom: -5px;
+            @media screen and (min-width: 321px) and (max-width: 520px) {
+      
+            }
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+              
+            }
+            @media screen and (min-width: 769px) {
+              font-size: 21px;
+              padding: 6px 16px 0;
+            }
           }
         } 
       }
@@ -469,6 +493,15 @@ html, body {
   }
   .introduction {
     padding-top: 154px;
+    @media screen and (min-width: 321px) and (max-width: 520px) {
+      
+    }
+    @media screen and (min-width: 521px) and (max-width: 768px) {
+      
+    }
+    @media screen and (min-width: 769px) {
+      padding-top: 125px 0 191px;
+    }
     .share {
       padding: 93.8px 0 181px 0;
       text-align: center;

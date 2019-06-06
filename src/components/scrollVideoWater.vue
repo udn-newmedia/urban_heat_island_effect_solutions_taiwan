@@ -122,7 +122,7 @@ export default {
       // let targetscrollpos = scrollpos;
       // let counter = 0;
       let targetscrollpos = (6 - videoEnd / 600)
-      if ( 0  < videoEnd && videoEnd < this.totalSection ) {
+      if ( -100 < videoEnd && videoEnd < this.totalSection + 100 ) {
           vm.moveVideo(videoEnd)
           vm.time = targetscrollpos
       }
@@ -180,7 +180,6 @@ export default {
   .section {
       height: 100vh;
       z-index: 100;
-      
       display: flex;
       justify-content: center;
       align-items: center;

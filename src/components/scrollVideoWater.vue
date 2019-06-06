@@ -135,7 +135,7 @@ export default {
           vm.moveVideo(videoEnd)
           vm.time = targetscrollpos
       }
-      
+
     }, 50),
     moveVideo (target) {
       let vm = this
@@ -181,7 +181,7 @@ export default {
       width: 100%;
       height: 100vh;
       object-fit: fill;
-      will-change: transform;
+      will-change: contents;
   }
   #scroll-video-content3 {
     height: 100vh;

@@ -428,8 +428,6 @@ html, body {
       font-weight: bold;
     }
   }
-  
-
   .cover {
     position: relative;
     background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg_mob.jpg');
@@ -454,9 +452,19 @@ html, body {
       z-index: 10;
       // margin: 0 27px;
       .cover-content {
-        margin: 0 auto;
-        max-width: 960px;
+        max-width: 880px;
         display: flex;
+        @media screen and (min-width: 321px) and (max-width: 520px) {
+      
+        }
+        @media screen and (min-width: 521px) and (max-width: 768px) {
+          max-width: 600px;
+          justify-content: center;
+        }
+        @media screen and (min-width: 769px) {
+          justify-content: center;
+        }
+        
         .subtitle-background {
           background-color: #ffffff;
           padding: 0px 20px 0px 16px; 

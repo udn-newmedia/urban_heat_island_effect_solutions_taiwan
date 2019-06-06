@@ -174,7 +174,7 @@ export default {
       width: 100%;
       height: 100vh;
       object-fit: fill;
-      will-change: transform;
+      will-change: contents;
   }
   #scroll-video-content2 {
     height: 100vh;

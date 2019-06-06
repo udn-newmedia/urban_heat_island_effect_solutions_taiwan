@@ -79,6 +79,17 @@ export default {
     let videoBackground = document.querySelector("#scroll-video-content1");
     let controller = new ScrollMagic.Controller({});
     let vid = document.getElementById('wind');
+    let body = document.body;
+    let timer;
+    
+    clearTimeout(timer);
+    if(!body.classList.contains('disable-hover')) {
+      body.classList.add('disable-hover')
+    }
+    
+    timer = setTimeout(function(){
+      body.classList.remove('disable-hover')
+    },500);
     
     
     new ScrollMagic.Scene({
@@ -149,7 +160,6 @@ export default {
         .to({ time: newStatus }, 1500)
         .easing(TWEEN.Easing.Quadratic.Out)
         .onUpdate(function(object) {
-            console.log(object.time);
             vid.currentTime = object.time
         })
         .start();

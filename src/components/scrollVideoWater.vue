@@ -118,14 +118,24 @@ export default {
       let vid = document.getElementById('water');
       let videoEnd = document.getElementById('videoSection3').getBoundingClientRect().bottom - document.getElementById('scroll-video-content3').offsetHeight
       let currentPlay = 0
-      // let scrollpos = totalSection / 600;
-      // let targetscrollpos = scrollpos;
-      // let counter = 0;
+      let body = document.body;
+      let timer;
       let targetscrollpos = (6 - videoEnd / 600)
+      
+      clearTimeout(timer);
+      if(!body.classList.contains('disable-hover')) {
+        body.classList.add('disable-hover')
+      }
+      
+      timer = setTimeout(function(){
+        body.classList.remove('disable-hover')
+      },500);
+
       if ( -100 < videoEnd && videoEnd < this.totalSection + 100 ) {
           vm.moveVideo(videoEnd)
           vm.time = targetscrollpos
       }
+      
     }, 50),
     moveVideo (target) {
       let vm = this
@@ -150,7 +160,6 @@ export default {
         .to({ time: newStatus }, 1500)
         .easing(TWEEN.Easing.Quadratic.Out)
         .onUpdate(function(object) {
-            console.log(object.time);
             vid.currentTime = object.time
         })
         .start();

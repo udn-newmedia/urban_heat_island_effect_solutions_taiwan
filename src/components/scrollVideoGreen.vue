@@ -115,10 +115,15 @@ export default {
       let vid = document.getElementById('green');
       let videoEnd = document.getElementById('videoSection2').getBoundingClientRect().bottom - document.getElementById('scroll-video-content2').offsetHeight
       let currentPlay = 0;
-      // let scrollpos = totalSection / 600;
-      // let targetscrollpos = scrollpos;
-      // let counter = 0;
+      let body = document.body;
+      let timer;
       let targetscrollpos = (6 - videoEnd / 600)
+      
+      clearTimeout(timer);
+      if(!body.classList.contains('disable-hover')) {
+        body.classList.add('disable-hover')
+      }
+
       if ( 0  < videoEnd && videoEnd < this.totalSection ) {
           vm.moveVideo(videoEnd)
           vm.time = targetscrollpos
@@ -142,7 +147,6 @@ export default {
         let vid = document.getElementById('green');
         let newStatus = newValue || 'no new value';
         let oldStatus = oldValue || 'no old value';
-        console.log(vid)
         let tween = new TWEEN.Tween({ time: oldStatus});
         tween
         .to({ time: newStatus }, 1500)

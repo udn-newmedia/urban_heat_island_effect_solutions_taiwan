@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <Indicator></Indicator>
-    <Head-Bar head-color="#fff" icon-color="#000">
+    <HeadBar head-color="#fff" icon-color="#000">
       <!-- <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
       <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
       <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a> -->
       <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
       <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
       <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a>
-    </Head-Bar>
+    </HeadBar>
     <div class="cover">
       <div class="cover-content-wrapper">
         <div class="cover-content">
@@ -232,7 +232,7 @@
                 </div>
               </div>
             </div>
-            <share></share>
+            <share href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan/"></share>
             <br>
             <editor>
               <div>採訪團隊：鄭朝陽、洪敬浤、徐如宜、鄭維真、張裕珍、魏翊庭</div>

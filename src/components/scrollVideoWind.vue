@@ -167,6 +167,9 @@ export default {
     }
   },
   components: {
+  },
+  beforeDestroy(){
+    window.removeEventListener('scroll', this.scrollPlay)
   }
 }
 </script>

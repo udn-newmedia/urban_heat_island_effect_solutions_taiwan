@@ -1,7 +1,7 @@
 <template>
     <header id="head-bar" :style="{top: top+'px',backgroundColor: setBackgroundColor}">
-        <div id="icon" @click.prevent='refresh'>
-            <a href="./"><i class="udn-icon udn-icon-logo" :style="{color: setColor}"></i></a>
+        <div id="icon"  @click="handleGA">
+            <a href="http://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect/"><i class="udn-icon udn-icon-logo" :style="{color: setColor}"></i></a>
         </div>
         <div id="hbutton-contain" :class="{transformToNone: isOpen}" :style="{transform: menuSlideDirection, backgroundColor: setBackgroundColor}">
 	    	<!-- <div class="scrollTo-Btn" v-for='title in getTitle' :style="{color: setColor, backgroundColor: setBackgroundColor}" @click="handleScrollTo(title.title)">{{title.title}}</div> -->
@@ -84,6 +84,14 @@ export default {
         }
     },
     methods: {
+        handleGA: function() {
+            ga("send", {
+                "hitType": "event",
+                "eventCategory": "headbar",
+                "eventAction": "click",
+                "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [聯 logo click]"
+            });
+        },
         handleLinkOut: function() {
             this.isOpen = false
         },
@@ -196,6 +204,10 @@ export default {
 <style lang="scss" scoped>
 .linkOut{
     text-align: center;
+    color: #b7b7b7;
+    .active {
+        color: black;
+    }
 }
 .linkOut a{
     background-color: inherit;
@@ -206,6 +218,7 @@ export default {
     font-size: 20px;
     text-decoration: none;
     display: block;
+    color: #b7b7b7;
 }
 .scrollTo-Btn{
     background-color: #FFFFFF;
@@ -441,9 +454,9 @@ export default {
         padding: 0 12px;
         height: 50px;
         line-height: 50px;
-        font-size: 16px;
         cursor: pointer;
         float: left;
+        color: #b7b7b7;
     }
 }
 @media screen and (orientation: landscape) {

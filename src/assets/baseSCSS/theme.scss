@@ -10,10 +10,29 @@
     padding: 20px;
     font-size: 15px;
     background-color: #fff;
+    @media screen and (min-width: 321px) and (max-width: 520px) {
+        
+    }
+    @media screen and (min-width: 521px) and (max-width: 768px) {
+        padding: 26px 40px;
+    }
+    @media screen and (min-width: 769px) {
+      padding: 24px 40px;
+      margin: 0 85px;
+    }
 }
 .quote-title {
     font-size: 28px;
     padding: 14px 28px;
     font-weight: bold;
     background-color: #fff;
+    @media screen and (min-width: 321px) and (max-width: 520px) {
+        
+    }
+    @media screen and (min-width: 521px) and (max-width: 768px) {
+      padding: 26px 40px;
+    }
+    @media screen and (min-width: 769px) {
+      padding: 24px 40px;
+    }
 }

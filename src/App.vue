@@ -6,21 +6,23 @@
       <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
       <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a> -->
       <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
-      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
+      <a class="active" href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
       <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a>
     </HeadBar>
     <div class="cover">
-      <div class="cover-content-wrapper">
-        <div class="cover-content">
-          <div class="subtitle-background">
-            <p class="subtitle">
-              當寶島變熱島
-            </p>
-            <p class="title">
-              幫都市退燒
-            </p>
+      <div class="container">
+        <div class="content">
+          <div class="cover-content">
+            <div class="subtitle">
+              <span class="cover-subtitle-mark">當寶島變熱島</span>
+            </div>
+            <div class="title">
+              <span class="cover-title-mark">幫都市退燒</span>
+            </div>
           </div>
-        </div>  
+        </div>
+      </div>
+      <div class="cover-background">
       </div>
     </div>
     <div class="introduction">
@@ -55,10 +57,6 @@
         <div class="content">
           <h3 class="wind-title paragraph-title">留一條路讓風走</h3>
           <br>
-          <p>為了讓涼爽的風能夠吹進都會區，新北市首創「風廊環境管制」，限制「水岸第一排」建築的最大面寬，留一條路讓風走。</p>
-          <br>
-          <p>新北市在2013年訂定新北市板橋江翠北側地區都市設計審議原則，限制「水岸第一排」垂直河道面的建築最大面寬僅能蓋7成，且全區建築需退縮4公尺作為人行道，即風不只進得來，更留有走廊可深入城市。</p>
-          <br>
           <p>為打造萬坪樹海、千里藍帶，建商常把公園、水岸第一排蓋好蓋滿，獨霸山河的景觀宅擋住了風，讓城市更炎熱。新北市政府率全國之先，在板橋江翠北側地區限制建築面寬，最多只能蓋到7成，剩下的空間讓路給風，甚至得模擬環境風場，藉此讓「熱島」降溫。</p>
           <br>
           <p>新北市政府在102年公布「新北市板橋（江翠北側地區）都市設計審議原則」，選定淡水河、新店溪與大漢溪交會的江翠北側重劃區，在102年正式實施；這片土地只有117公頃，只佔新北市區土地的千分之一，儘管範圍不大，卻是台灣個第一起針對河岸建築的風環境管制規範。</p>
@@ -69,11 +67,9 @@
           <br>
           <p>新北市城鄉局表示，限制河岸建築的寬度，保留30%以上的空間，希望拉大建築物的棟距，避免過去把水岸第一排蓋好蓋滿，影響整體景觀，也讓風能穿過水岸第一排建築，深入後排建築，來降低都市熱島效應。</p>
           <br>
-          <p>由於江翠北側是一整塊總計超過80公頃重畫區，有長達5,700米的水岸線，新北市城鄉局以此作為風廊示範地，目前共有19個建案。參與其中建案的建築師林秀芬表示，建築物中間有空隙，有助疏通建築物的熱能。</p>
+          <p>林子平指出，全台目前只有新北、台南沙崙特定區有要求留20公尺廊道，面對嚴峻的都市通風問題，國土計畫以及縣市政府對應的太少，目前建築有太陽日照數管制，或許未來建築基地也可針對通風管制，公園配置狹長型，有利風流動。</p>
           <br>
-          <p>長期研究都市風廊道的林子平指出，全台目前只有新北、台南沙崙特定區有要求留20公尺廊道，面對嚴峻的都市通風問題，國土計畫以及縣市政府對應的太少，目前建築有太陽日照數管制，或許未來建築基地也可針對通風管制，公園配置狹長型，有利風流動。</p>
-          <br>
-          <p>「西側被擋住，內部就越無可救藥」，林子平說，海線是迎風第一道牆，規範要越嚴格，才能讓風順利吹向陸地，大量灌木可能會降低城市風速，因此建議行道樹選擇樹冠高一點的樹種，他也指出，都市設計規劃應結合氣候狀況，以促進可永續發展的都市環境、以及更舒適的通風居住空間規劃設計。</p>
+          <p>他也指出，都市設計規劃應結合氣候狀況，以促進可永續發展的都市環境、以及更舒適的通風居住空間規劃設計。</p>
         </div>
       </div>
     </div>
@@ -130,8 +126,6 @@
         <div class="content">
           <h3 class="water-title paragraph-title">用水廊為都市降溫</h3>
           <br>
-          <p>若以基礎物理觀念「水在蒸發過程中會吸收周圍的熱量」出發，保留水體、營造水廊，成為降低都市熱島效應的有效途徑。</p>
-          <br>
           <p>高雄學界倡議開闢都市水廊，水體蒸散降溫外，水流也會帶動風的流動。高雄鐵路地下化工程為高雄帶來「水綠園道」的契機，學者想像為高雄都會區織起水廊網絡，從高屏溪藉重力引水向西，打通曹圳道、後勁溼、愛河流域、鳳山溪加前鎮河水系，水起風生為城市降溫。</p>
           <br>
           <p>前屏東縣環保局長、高苑科大綠環境學程兼任講師魯台營說，在冷氣機還很遙遠的年代，小時候當教室熱的受不了，老師就喊：值日生來，在地上灑灑水！讓室溫得以稍降。都市水廊也是這個道理。「因為水在蒸發過程中會吸收周圍環境的熱量。」1公克水的蒸發，會吸收540卡的熱量，這也是為什麼水岸旁總是比較涼爽的原因。</p>
@@ -177,7 +171,7 @@
                     <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect/">
                       <img src="../public/images/relate/relate_1.jpg" alt="">
                       <div class="describe">
-                        <p>高溫會殺人</p>
+                        <span>高溫會殺人</span>
                       </div> 
                     </a>           
                   </div>
@@ -187,7 +181,7 @@
                     <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad/">
                       <img src="../public/images/relate/relate_3.jpg" alt="">
                       <div class="describe">
-                        <p>新加坡用綠化降溫</p>
+                        <span>新加坡用綠化降溫</span>
                       </div>
                     </a>         
                   </div>
@@ -195,40 +189,48 @@
               </div>
               <div class="end-report-related-sec-layer">
                 <div class="left">
-                  <div class="box">
-                    <a href="https://udn.com/news/story/11319/3302778">
-                      <img src="../public/images/relate/relate_4.jpg" alt="">
-                      <div class="describe">
-                        <p>勞工高溫休息於法有據 醫籲落實勞檢</p>
-                      </div>
-                    </a>
-                  </div>
+                  <div class="middle-left">
                     <div class="box">
-                    <a href="https://udn.com/news/story/11321/3283436">
-                      <img src="../public/images/relate/relate_5.jpg" alt="">
-                      <div class="describe">
-                        <p>聯合筆記／走路有風的城市</p>
-                      </div>
-                    </a>
+                      <a @click="handleGA('Related_main', 'R3_main')" href="https://udn.com/news/story/11319/3302778">
+                        <img src="../public/images/relate/relate_4.jpg" alt="">
+                        <div class="describe">
+                          <span>勞工高溫休息於法有據 醫籲落實勞檢</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="middle-right">
+                    <div class="box">
+                      <a @click="handleGA('Related_main', 'R4_main')"  href="https://udn.com/news/story/11321/3283436">
+                        <img src="../public/images/relate/relate_5.jpg" alt="">
+                        <div class="describe">
+                          <span>聯合筆記／走路有風的城市</span>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div class="right">
-                  <div class="box">
-                    <a href="https://udn.com/news/story/7323/3787399">
-                      <img src="../public/images/relate/relate_6.jpg" alt="">
-                      <div class="describe">
-                        <p>減緩短暫強降雨致災情況 公私合作打造新北海綿城市</p>
-                      </div>
-                    </a>   
+                  <div class="middle-left">
+                    <div class="box">
+                      <a @click="handleGA('Related_main', 'R5_main')"  href="https://vision.udn.com/vision/story/12840/3829036">
+                        <img src="../public/images/relate/relate_6.jpg" alt="">
+                        <div class="describe">
+                          <span>超「綠」辦公樓 出差要買碳排費</span>
+                        </div>
+                      </a>   
+                    </div>
                   </div>
-                  <div class="box">
-                    <a href="https://vision.udn.com/vision/story/12840/3829036">
-                      <img src="../public/images/relate/relate_7.jpg" alt="">
-                      <div class="describe">
-                        <p>超「綠」辦公樓 出差要買碳排費</p>
-                      </div>
-                    </a>   
-                  </div>
+                  <div class="middle-right">
+                    <div  class="box">
+                      <a  @click="handleGA('Related_main', 'R6_main')"  href="https://udn.com/news/story/7323/3787399">
+                        <img src="../public/images/relate/relate_7.jpg" alt="">
+                        <div class="describe">
+                          <span>減緩短暫強降雨致災情況 公私合作打造新北海綿城市</span>
+                        </div>
+                      </a>   
+                    </div>
+                  </div>     
                 </div>
               </div>
             </div>
@@ -261,6 +263,9 @@
           </div>
         </div>
     </div>
+
+    <back-top></back-top>
+    <foot></foot>
     
   </div>
 </template>
@@ -305,8 +310,6 @@ export default {
     // var controller = new ScrollMagic.Controller({});
     
 		// get all slides
-    // var cover = document.querySelector(".cover-background");
-
     // new ScrollMagic.Scene({
     //       triggerElement: cover,
     //       triggerHook: 'onLeave',
@@ -323,7 +326,7 @@ export default {
     new ScrollMagic.Scene({
         triggerElement: end,
         triggerHook: 'onLeave',
-        duration: "500%"
+        duration: "600%"
       })
       .setPin(end, {pushFollowers: false})
       // .addIndicators() // add indicators (requires plugin)
@@ -423,6 +426,7 @@ html, body {
 
   .paragraph {
     padding: 148px 0;
+    background-color: #fff;
     .paragraph-title {
       font-size: 22px;
       font-weight: bold;
@@ -430,77 +434,102 @@ html, body {
   }
   .cover {
     position: relative;
-    background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg_mob.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 200vh;
-    @media screen and (min-width: 321px) and (max-width: 520px) {
-      
-    }
-    @media screen and (min-width: 521px) and (max-width: 768px) {
-      
-    }
-    @media screen and (min-width: 769px) {
-      background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg.jpg');
-    }
-    .cover-content-wrapper {
+    width: 100%;
+    height: 100vh;
+    .cover-content {
       width: 100%;
       height: 100vh;
-      position: absolute;
-      bottom: 0;
-      z-index: 10;
-      // margin: 0 27px;
-      .cover-content {
-        max-width: 880px;
-        display: flex;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @media screen and (min-width: 321px) and (max-width: 520px) {
+      
+      }
+      @media screen and (min-width: 521px) and (max-width: 768px) {
+        
+      }
+      @media screen and (min-width: 769px) {
+        margin: 0 85px;
+      }
+      .subtitle {
+        font-size: 20px;
         @media screen and (min-width: 321px) and (max-width: 520px) {
       
         }
         @media screen and (min-width: 521px) and (max-width: 768px) {
-          max-width: 600px;
-          justify-content: center;
+          font-size: 21px;
         }
         @media screen and (min-width: 769px) {
-          justify-content: center;
+          font-size: 21px;
         }
+        .cover-subtitle-mark {
+          background-color: #fff;
+          padding: 6px 16px;
+          @media screen and (min-width: 321px) and (max-width: 520px) {
         
-        .subtitle-background {
-          background-color: #ffffff;
-          padding: 0px 20px 0px 16px; 
-          .title {
-            font-size: 28px;
-            font-weight: bold;
-            @media screen and (min-width: 321px) and (max-width: 520px) {
-      
-            }
-            @media screen and (min-width: 521px) and (max-width: 768px) {
-              
-            }
-            @media screen and (min-width: 769px) {
-              font-size: 40px;
-              padding: 3px 16px;
-            }
           }
-          .subtitle {     
-            margin-bottom: -5px;
-            @media screen and (min-width: 321px) and (max-width: 520px) {
-      
-            }
-            @media screen and (min-width: 521px) and (max-width: 768px) {
-              
-            }
-            @media screen and (min-width: 769px) {
-              font-size: 21px;
-              padding: 6px 16px 0;
-            }
+          @media screen and (min-width: 521px) and (max-width: 768px) {
+
           }
-        } 
+          @media screen and (min-width: 769px) {
+            padding: 24px 40px 10px;
+          } 
+        }
+      }
+      .title {
+        font-size: 28px;
+        font-weight: bold;
+        @media screen and (min-width: 321px) and (max-width: 520px) {
+      
+        }
+        @media screen and (min-width: 521px) and (max-width: 768px) {
+           font-size: 50px;
+        }
+        @media screen and (min-width: 769px) {
+          font-size: 40px;
+        }
+        .cover-title-mark {
+          background-color: #fff;
+          padding: 6px 16px;
+          @media screen and (min-width: 321px) and (max-width: 520px) {
+        
+          }
+          @media screen and (min-width: 521px) and (max-width: 768px) {
+          }
+          @media screen and (min-width: 769px) {
+            padding: 0 40px 24px;
+          } 
+        }
+      }
+      
+    }
+    .cover-background {
+      width: 100%;
+      height: 100vh;
+      background-size:cover;
+      background-repeat: no-repeat;
+      background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg_mob.jpg');
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -10;
+      @media screen and (min-width: 321px) and (max-width: 520px) {
+      
+      }
+      @media screen and (min-width: 521px) and (max-width: 768px) {
+        
+      }
+      @media screen and (min-width: 769px) {
+        background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg.jpg');
       }
     }
   }
   .introduction {
     padding-top: 154px;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    min-height: 100vh;
     @media screen and (min-width: 321px) and (max-width: 520px) {
       
     }
@@ -583,13 +612,34 @@ html, body {
       color: white;
       padding: 500px 0 450px;
       .end-report {
+        padding-bottom: 120px;
+        @media screen and (min-width: 321px) and (max-width: 520px) {
+          padding-bottom: 406px;
+        }
+        @media screen and (min-width: 521px) and (max-width: 768px) {
+          padding-bottom: 123px;
+        }
+        @media screen and (min-width: 769px) {
+          padding-bottom: 203px;
+        }
         .end-report-title {
           font-size: 15px;
           padding-bottom: 10px;
           border-bottom: solid 2px #7d7d7d;
+          @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+          }
+          @media screen and (min-width: 521px) and (max-width: 768px) {
+            
+          }
+          @media screen and (min-width: 769px) {
+            font-size: 25px;
+            margin-bottom: 33px;
+          }
           .end-report-title-mark {
             background-color:#ff0000;
             padding-right: 5px;
+            font-weight: bold;
           }
         }
         .end-report-related-first-layer, .end-report-related-sec-layer {
@@ -601,6 +651,7 @@ html, body {
           }
           @media screen and (min-width: 769px) {
             display: flex;
+            font-size: 18px;
           }
 
           .left, .right {
@@ -613,15 +664,27 @@ html, body {
             }
             @media screen and (min-width: 769px) {
               width: 50%;
-            }   
+            }
+            img {
+              border-radius: 3px;
+            }
           }
           .left {
             @media screen and (min-width: 521px) and (max-width: 768px) {
-              padding-right: 12px;
+              padding-right: 6px;
               
             }
             @media screen and (min-width: 769px) {
-              padding-right: 12px;
+              padding-right: 6px;
+            }
+          }
+          .right {
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+              padding-left: 6px;
+              
+            }
+            @media screen and (min-width: 769px) {
+              padding-left: 6px;
             }
           }
         }
@@ -636,10 +699,11 @@ html, body {
             }
             @media screen and (min-width: 769px) {
               display: flex;
+              font-size: 16px;
             }
-            .box {
+            .middle-left, .middle-right {
               @media screen and (min-width: 321px) and (max-width: 520px) {
-              
+            
               }
               @media screen and (min-width: 521px) and (max-width: 768px) {
                 width: 50%;
@@ -648,17 +712,69 @@ html, body {
               @media screen and (min-width: 769px) {
                 width: 50%;
               }
-              &:first-child {
-                @media screen and (min-width: 321px) and (max-width: 520px) {
+            }
+          }
+          .left {
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+              padding-right: 6px;
               
-                }
-                @media screen and (min-width: 521px) and (max-width: 768px) {
-                  padding-right: 12px;
-                  
-                }
-                @media screen and (min-width: 769px) {
-                  padding-right: 12px;
-                }
+            }
+            @media screen and (min-width: 769px) {
+              padding-right: 6px;
+            }
+            .middle-left {
+              @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+              }
+              @media screen and (min-width: 521px) and (max-width: 768px) {
+                padding-right: 6px;
+                
+              }
+              @media screen and (min-width: 769px) {
+                padding-right: 6px;
+              }
+            }
+            .middle-right {
+              @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+              }
+              @media screen and (min-width: 521px) and (max-width: 768px) {
+                padding-left: 6px;
+              }
+              @media screen and (min-width: 769px) {
+                padding-left: 6px;
+              }
+            }
+          }
+          .right {
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+              padding-left: 6px;
+              
+            }
+            @media screen and (min-width: 769px) {
+              padding-left: 6px;
+            }
+            .middle-left {
+              @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+              }
+              @media screen and (min-width: 521px) and (max-width: 768px) {
+                padding-right: 6px;
+                
+              }
+              @media screen and (min-width: 769px) {
+                padding-right: 6px;
+              }
+            }
+            .middle-right {
+              @media screen and (min-width: 321px) and (max-width: 520px) {
+            
+              }
+              @media screen and (min-width: 521px) and (max-width: 768px) {
+                padding-left: 6px;
+              }
+              @media screen and (min-width: 769px) {
+                padding-left: 6px;
               }
             }
           }
@@ -666,9 +782,6 @@ html, body {
       }
       .share {
         background-color: white;
-        i {
-          cursor: pointer;
-        }
       }
     }
   }

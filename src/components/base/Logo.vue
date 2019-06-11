@@ -7,12 +7,12 @@
               </a>
           </li>
           <li class="list" @click="handleGA(links[1].name)" >
-              <a >
+              <a :href="links[1].link" >
                   <img :src="links[1].logo" alt="">
               </a>
           </li>
           <li class="list" @click="handleGA(links[2].name)" >
-              <a :href="links[2].link">
+              <a>
                   <img :src="links[2].logo" alt="">
               </a>
           </li>
@@ -56,7 +56,7 @@ export default {
             "hitType": "event",
             "eventCategory": "out link title",
             "eventAction": "click",
-            "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [外連到「 " + logo +  " 」]"
+            "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "][.com_main][外連到「 " + logo +  " 」]"
         })
       }
   },

@@ -156,6 +156,7 @@ export default {
         let newStatus = newValue || 'no new value';
         let oldStatus = oldValue || 'no old value';
         let tween = new TWEEN.Tween({ time: oldStatus});
+
         tween
         .to({ time: newStatus }, 1500)
         .easing(TWEEN.Easing.Quadratic.Out)

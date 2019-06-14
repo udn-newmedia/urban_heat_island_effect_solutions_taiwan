@@ -4,12 +4,12 @@
     <HeadBar head-color="#fff" icon-color="#000">
       <!-- <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
       <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
-      <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a> -->
+      <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡用綠化降溫</a> -->
       <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
       <a class="active" href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
-      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a>
+      <a href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡用綠化降溫</a>
     </HeadBar>
-    <div class="cover">
+    <div ref="cover" class="cover">
       <div class="container">
         <div class="content">
           <div class="cover-content">
@@ -22,7 +22,7 @@
           </div>
         </div>
       </div>
-      <div class="cover-background">
+      <div :class="{active: isCoverActive}" class="cover-background">
       </div>
     </div>
     <div class="introduction">
@@ -69,7 +69,6 @@
           <br>
           <p>林子平指出，全台目前只有新北、台南沙崙特定區有要求留20公尺廊道，面對嚴峻的都市通風問題，國土計畫以及縣市政府對應的太少，目前建築有太陽日照數管制，或許未來建築基地也可針對通風管制，公園配置狹長型，有利風流動。</p>
           <br>
-          <p>他也指出，都市設計規劃應結合氣候狀況，以促進可永續發展的都市環境、以及更舒適的通風居住空間規劃設計。</p>
         </div>
       </div>
     </div>
@@ -284,6 +283,7 @@ export default {
     return {
       coverImg1: 'heat_island_effect_solutions_taiwan_bg.jpg',
       coverImgMob1: 'heat_island_effect_solutions_taiwan_bg_mob.jpg',
+      isCoverActive: true,
       windowheight: null,
       scrollpos: window.pageYOffset/50,
       targetscrollpos: null,
@@ -305,20 +305,6 @@ export default {
     scrollVideoWater
   },
   mounted () {
-
-
-    // var controller = new ScrollMagic.Controller({});
-    
-		// get all slides
-    // new ScrollMagic.Scene({
-    //       triggerElement: cover,
-    //       triggerHook: 'onLeave',
-    //       duration: "100%"
-		// 		})
-		// 		.setPin(cover, {pushFollowers: false})
-		// 		// .addIndicators() // add indicators (requires plugin)
-    // 		.addTo(controller);
-    
     
     var end = document.querySelector("#end-background-video");
     var controller = new ScrollMagic.Controller();
@@ -341,7 +327,6 @@ export default {
                                       window[vendors[x] + 'CancelRequestAnimationFrame'];
     }
 
-
         if (!window.requestAnimationFrame) {
             window.requestAnimationFrame = function(callback, element) {
                 var currTime = new Date().getTime();
@@ -359,6 +344,8 @@ export default {
             };
         }
     }());
+
+    window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     LineShare (href) {
@@ -405,6 +392,15 @@ export default {
         }
       );
     },
+    handleScroll () {
+      if (this.$refs['cover']) {
+        if(this.$refs['cover'].getBoundingClientRect().bottom > 0) {
+          this.isCoverActive = true
+        } else {
+          this.isCoverActive = false
+        }
+      }
+    }
   },
 }
 </script>
@@ -509,7 +505,7 @@ html, body {
       background-size:cover;
       background-repeat: no-repeat;
       background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg_mob.jpg');
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       z-index: -10;
@@ -521,6 +517,9 @@ html, body {
       }
       @media screen and (min-width: 769px) {
         background-image: url('../public/images/heat_island_effect_solutions_taiwan_bg.jpg');
+      }
+      &.active {
+        position: fixed;
       }
     }
   }

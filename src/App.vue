@@ -145,15 +145,13 @@
           width="100vw"
           preload="metadata"
           :poster="srcRWD(require('../public/video/end/heat_island_effect_solutions_taiwan_end_mob_1.jpg'), require('../public/video/end/heat_island_effect_solutions_taiwan_end_1.jpg'))"
-          :src="srcRWD(endBackgroundVideoMob, endBackgroundVideo)"
+          :src="srcRWD('http://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan/video/end/heat_island_effect_solutions_taiwan_end_mob.mp4', 'http://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan/video/end/heat_island_effect_solutions_taiwan_end.mp4')"
           autobuffer
           autoplay
           loop
           muted
           playsinline
         >
-          <!-- <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(endBackgroundVideoMob, endBackgroundVideo)" webkit-playsinline="true"></source>
-          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(endBackgroundVideoMob, endBackgroundVideo)"></source> -->
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(endBackgroundVideoMob, endBackgroundVideo)" />
         </video>
       </div>

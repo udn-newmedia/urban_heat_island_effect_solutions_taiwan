@@ -7,7 +7,7 @@
             class="video-player sidebar__inner"
             width="100vw"
             id="wind"
-            :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )"
+            :src="srcRWD('https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/wind/heat_island_effect_solutions_taiwan_wind_mob.mp4', 'https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/wind/heat_island_effect_solutions_taiwan_wind.mp4')"
             :poster="srcRWD(require('../../public/video/wind/heat_island_effect_solutions_taiwan_wind_mob_1.jpg'), require('../../public/video/wind/heat_island_effect_solutions_taiwan_wind_1.jpg'))"
             preload="metadata"
             autobuffer

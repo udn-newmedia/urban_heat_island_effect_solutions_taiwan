@@ -7,7 +7,7 @@
             class="video-player sidebar__inner"
             width="100vw"
             id="water"
-            :src="srcRWD(require('../../public/video/water/' + videoMob3), require('../../public/video/water/' + video1) )"
+            :src="srcRWD('https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/water/heat_island_effect_solutions_taiwan_water_mob.mp4', 'https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/water/heat_island_effect_solutions_taiwan_water.mp4' )"
             :poster="srcRWD(require('../../public/video/water/heat_island_effect_solutions_taiwan_water_mob_1.jpg'), require('../../public/video/water/heat_island_effect_solutions_taiwan_water_1.jpg') )"
             preload="metadata"
             autobuffer

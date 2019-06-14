@@ -7,7 +7,7 @@
             class="video-player sidebar__inner"
             width="100vw"
             id="green"
-            :src="srcRWD(require('../../public/video/green/' + videoMob2), require('../../public/video/green/' + video1) )"
+            :src="srcRWD('https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/green/heat_island_effect_solutions_taiwan_green_mob.mp4', 'https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/green/heat_island_effect_solutions_taiwan_green.mp4')"
             :poster="srcRWD(require('../../public/video/green/heat_island_effect_solutions_taiwan_green_mob_1.jpg'), require('../../public/video/green/heat_island_effect_solutions_taiwan_green_1.jpg'))"
             preload="metadata"
             autobuffer
@@ -134,7 +134,7 @@ export default {
         if (  -100  < target && target < this.totalSection + 100 ) {
           setTimeout(()=>{
             vm.rqa = requestAnimationFrame(vm.moveVideo);
-          }, 1000/ this.fps)
+          }, 50)
           TWEEN.update();
         } else {
           cancelAnimationFrame(vm.rqa)

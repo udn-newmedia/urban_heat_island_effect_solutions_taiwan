@@ -7,15 +7,13 @@
             class="video-player sidebar__inner"
             width="100vw"
             id="wind"
-            :src="srcRWD('https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/wind/heat_island_effect_solutions_taiwan_wind_mob.mp4', 'https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/wind/heat_island_effect_solutions_taiwan_wind.mp4')"
+            :src="srcRWD('https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/wind/heat_island_effect_solutions_taiwan_wind_mob.mp4', 'https://p3.udn.com.tw/urban_heat_island_effect_solutions_taiwan/video/wind/heat_island_effect_solutions_taiwan_wind.mp4' )"
             :poster="srcRWD(require('../../public/video/wind/heat_island_effect_solutions_taiwan_wind_mob_1.jpg'), require('../../public/video/wind/heat_island_effect_solutions_taiwan_wind_1.jpg'))"
             preload="metadata"
             autobuffer
             muted
             playsinline>
           </video>
-          <!-- <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )" webkit-playsinline="true" />
-          <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )" /> -->
           <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" :src="srcRWD(require('../../public/video/wind/' + videoMob1), require('../../public/video/wind/' + video1) )" />
         </div>
         <div class="section">
@@ -156,7 +154,6 @@ export default {
         let newStatus = newValue || 'no new value';
         let oldStatus = oldValue || 'no old value';
         let tween = new TWEEN.Tween({ time: oldStatus});
-
         tween
         .to({ time: newStatus }, 1500)
         .easing(TWEEN.Easing.Quadratic.Out)

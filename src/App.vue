@@ -10,16 +10,18 @@
       <a @click="handleGA('menu bar_main', 'M3_main')" href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a>
     </HeadBar>
     <div class="cover">
-      <div class="cover-content-wrapper">
+      <div class="container">
         <div class="cover-content">
-          <div class="subtitle-background">
-            <p class="subtitle">
+          <p class="subtitle">
+            <span class="title-background">
               當寶島變熱島
-            </p>
-            <p class="title">
+            </span>
+          </p>
+          <p class="title">
+            <span class="title-background">
               幫都市退燒
-            </p>
-          </div>
+            </span>    
+          </p>
         </div>
       </div>
       <div :class="{active: isCoverActive}" class="cover-background">
@@ -165,17 +167,17 @@
               <div class="end-report-related-first-layer">
                 <div class="left">
                   <div class="box">
-                    <a  @click="handleGA('Related_main', 'R1_main')"  href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect">
+                    <a @click="handleGA('Related_main', 'R1_main')"  href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">
                       <img src="../public/images/relate/relate_2.jpg" alt="">
                       <div class="describe">
-                        <p>高溫會殺人</p>
+                        <span>幫都市退燒</span>
                       </div> 
                     </a>           
                   </div>
                 </div>
                 <div class="right">
                   <div class="box">
-                    <a @click="handleGA('Related_main', 'R2_main')" href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">
+                    <a @click="handleGA('Related_main', 'R2_main')" href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">
                       <img src="../public/images/relate/relate_3.jpg" alt="">
                       <div class="describe">
                         <span>新加坡用綠化降溫</span>
@@ -186,40 +188,37 @@
               </div>
               <div class="end-report-related-sec-layer">
                 <div class="left">
-                  <div class="box">
-                    <a @click="handleGA('Related_main', 'R3_main')" href="https://udn.com/news/story/11319/3302778">
-                      <img src="../public/images/relate/relate_4.jpg" alt="">
-                      <div class="describe">
-                        <p>勞工高溫休息於法有據 醫籲落實勞檢</p>
-                      </div>
-                    </a>
+                  <div class="middle-left">
+                    <div class="box">
+                      <a @click="handleGA('Related_main', 'R3_main')" href="https://udn.com/news/story/11319/3302778">
+                        <img src="../public/images/relate/relate_4.jpg" alt="">
+                        <div class="describe">
+                          <span>勞工高溫休息於法有據 醫籲落實勞檢</span>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                   <div class="middle-right">
                     <div class="box">
-                    <a @click="handleGA('Related_main', 'R4_main')"  href="https://udn.com/news/story/11321/3283436">
-                      <img src="../public/images/relate/relate_5.jpg" alt="">
-                      <div class="describe">
-                        <p>聯合筆記／走路有風的城市</p>
-                      </div>
-                    </a>
+                      <a @click="handleGA('Related_main', 'R4_main')"  href="https://udn.com/news/story/11321/3283436">
+                        <img src="../public/images/relate/relate_5.jpg" alt="">
+                        <div class="describe">
+                          <span>聯合筆記／走路有風的城市</span>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div class="right">
-                  <div class="box">
-                    <a @click="handleGA('Related_main', 'R5_main')" href="https://udn.com/news/story/7323/3787399">
-                      <img src="../public/images/relate/relate_6.jpg" alt="">
-                      <div class="describe">
-                        <p>減緩短暫強降雨致災情況 公私合作打造新北海綿城市</p>
-                      </div>
-                    </a>   
-                  </div>
-                  <div class="box">
-                    <a @click="handleGA('Related_main', 'R6_main')" href="https://vision.udn.com/vision/story/12840/3829036">
-                      <img src="../public/images/relate/relate_7.jpg" alt="">
-                      <div class="describe">
-                        <p>超「綠」辦公樓 出差要買碳排費</p>
-                      </div>
-                    </a>   
+                  <div class="middle-left">
+                    <div class="box">
+                      <a @click="handleGA('Related_main', 'R5_main')"  href="https://vision.udn.com/vision/story/12840/3829036">
+                        <img src="../public/images/relate/relate_6.jpg" alt="">
+                        <div class="describe">
+                          <span>超「綠」辦公樓 出差要買碳排費</span>
+                        </div>
+                      </a>   
+                    </div>
                   </div>
                   <div class="middle-right">
                     <div  class="box">
@@ -234,8 +233,10 @@
                 </div>
               </div>
             </div>
+
             <share href="https://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan/"></share>
             <br>
+
             <editor>
               <div>採訪團隊：鄭朝陽、洪敬浤、徐如宜、鄭維真、張裕珍、魏翊庭</div>
               <div>影像：王騰毅、林澔一、杜建重、黃仲裕、報系資料照</div>
@@ -245,6 +246,7 @@
               <div>監製：林秀姿、董谷音、潘如瑩</div>
               <div>2019.06.18</div>
             </editor>
+
             <br>
             <logo></logo>
             <br>
@@ -442,73 +444,91 @@ html, body {
     position: relative;
     width: 100%;
     height: 100vh;
-    .cover-content {
-      width: 100%;
+    .container {
       height: 100vh;
+      padding: 20px;
+      width: 100%;
+      margin: 0 auto;
       display: flex;
-      justify-content: center;
-      flex-direction: column;
+      align-items: center;
       @media screen and (min-width: 321px) and (max-width: 520px) {
-      
+
       }
       @media screen and (min-width: 521px) and (max-width: 768px) {
-        
+        max-width: 550px;
       }
       @media screen and (min-width: 769px) {
-        margin: 0 85px;
+        max-width: 880px;
+        // padding: 0 325px;
       }
-      .subtitle {
-        font-size: 20px;
+      .cover-content {
+        margin: auto 0;
         @media screen and (min-width: 321px) and (max-width: 520px) {
-      
+        
         }
         @media screen and (min-width: 521px) and (max-width: 768px) {
-          font-size: 21px;
+          
         }
         @media screen and (min-width: 769px) {
-          font-size: 21px;
+          margin: 0 85px;
         }
-        .cover-subtitle-mark {
-          background-color: #fff;
-          padding: 6px 16px;
+        .title-background {
+          background-color: white;
+          padding: 8px 16px;
+        }
+        .subtitle {
+          font-size: 20px;
           @media screen and (min-width: 321px) and (max-width: 520px) {
         
           }
           @media screen and (min-width: 521px) and (max-width: 768px) {
+            font-size: 21px;
+          }
+          @media screen and (min-width: 769px) {
+            font-size: 21px;
+          }
+          .cover-subtitle-mark {
+            background-color: #fff;
+            padding: 6px 16px;
+            @media screen and (min-width: 321px) and (max-width: 520px) {
+          
+            }
+            @media screen and (min-width: 521px) and (max-width: 768px) {
 
+            }
+            @media screen and (min-width: 769px) {
+              padding: 24px 40px 10px;
+            } 
           }
-          @media screen and (min-width: 769px) {
-            padding: 24px 40px 10px;
-          } 
         }
-      }
-      .title {
-        font-size: 28px;
-        font-weight: bold;
-        @media screen and (min-width: 321px) and (max-width: 520px) {
-      
-        }
-        @media screen and (min-width: 521px) and (max-width: 768px) {
-           font-size: 50px;
-        }
-        @media screen and (min-width: 769px) {
-          font-size: 40px;
-        }
-        .cover-title-mark {
-          background-color: #fff;
-          padding: 6px 16px;
+        .title {
+          font-size: 28px;
+          font-weight: bold;
           @media screen and (min-width: 321px) and (max-width: 520px) {
         
           }
           @media screen and (min-width: 521px) and (max-width: 768px) {
+            font-size: 50px;
           }
           @media screen and (min-width: 769px) {
-            padding: 0 40px 24px;
-          } 
+            font-size: 50px;
+          }
+          .cover-title-mark {
+            background-color: #fff;
+            padding: 6px 16px;
+            @media screen and (min-width: 321px) and (max-width: 520px) {
+          
+            }
+            @media screen and (min-width: 521px) and (max-width: 768px) {
+            }
+            @media screen and (min-width: 769px) {
+              padding: 0 40px 24px;
+            } 
+          }
         }
       }
-      
     }
+
     .cover-background {
       width: 100%;
       height: 100vh;

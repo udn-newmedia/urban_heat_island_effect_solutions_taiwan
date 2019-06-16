@@ -381,28 +381,10 @@ export default {
         "eventAction": "click",
         "eventLabel": "[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [facebook share]"
       })
-      FB.ui(
-        {
-          method: 'share_open_graph',
-          action_type: 'og.shares',
-          action_properties: JSON.stringify({
-            object: {
-              'og:url': href,
-              'og:title': '你是網路「透明人」嗎？測驗你的隱私危險指數',
-              'og:description': '台灣人愛滑臉書、下載App，卻不知道自己的隱私可能已經悄悄外洩，在網路世界中宛如透明人。你的個資保護夠安全嗎？快透過小測驗評估你的隱私危險指數。',
-              'og:image': 'https://udn.com/upf/newmedia/2019_data/digital_privacy/quiz/meta/meta_quiz.jpg'
-            }
-          })
-        },
-        // callback
-        function(response) {
-          if (response && !response.error_message) {
-            console.log(response);
-          } else {
-            console.log(response.error_message);
-          }
-        }
-      );
+      FB.ui({
+        method: 'share',
+        href: href,
+      }, function(response){});
     },
     handleScroll () {
       if (this.$refs['cover']) {

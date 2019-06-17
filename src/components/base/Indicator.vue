@@ -35,7 +35,7 @@ export default {
       if (Math.floor(this.progress / 10) > this.readProgress) {
         for (var i = this.readProgress + 1; i <= Math.floor(this.progress / 10); i++) {
           console.log("[" + Utils.detectPlatform() + "] [" + document.querySelector('title').innerHTML + "] [page read " + (i * 10) + "%]")
-          window.ga("send", {
+          window.ga("newmedia.send", {
             "hitType": "event",
             "eventCategory": "read",
             "eventAction": "scroll",

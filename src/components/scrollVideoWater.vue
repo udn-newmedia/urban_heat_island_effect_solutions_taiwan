@@ -160,7 +160,6 @@ export default {
         .to({ time: newStatus }, 1500)
         .easing(TWEEN.Easing.Quadratic.Out)
         .onUpdate(function(object) {
-            console.log(object.time)
             vid.currentTime = object.time
         })
         .start();

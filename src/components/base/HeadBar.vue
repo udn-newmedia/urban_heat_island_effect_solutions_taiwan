@@ -1,7 +1,7 @@
 <template>
     <header id="head-bar" :style="{top: top+'px',backgroundColor: setBackgroundColor}">
         <div id="icon"  @click="handleGA">
-            <a href="http://nmdap.udn.com.tw/upf/newmedia/2019_data/urban_heat_island_effect/"><i class="udn-icon udn-icon-logo" :style="{color: setColor}"></i></a>
+            <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect/"><i class="udn-icon udn-icon-logo" :style="{color: setColor}"></i></a>
         </div>
         <div id="hbutton-contain" :class="{transformToNone: isOpen}" :style="{transform: menuSlideDirection, backgroundColor: setBackgroundColor}">
 	    	<!-- <div class="scrollTo-Btn" v-for='title in getTitle' :style="{color: setColor, backgroundColor: setBackgroundColor}" @click="handleScrollTo(title.title)">{{title.title}}</div> -->

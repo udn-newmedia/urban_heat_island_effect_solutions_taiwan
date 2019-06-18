@@ -138,15 +138,15 @@ export default {
                 return
             }
             self.getTitle.push(msg)
-            setTimeout(function(){
-                $('.scrollTo-Btn').hover(function(){
-                    $(this).css('color', self.setBackgroundColor)
-                    $(this).css('background-color', self.setColor)
-                }, function(){
-                    $(this).css('color', self.setColor)
-                    $(this).css('background-color', self.setBackgroundColor)
-                })
-            }, 500)    
+            // setTimeout(function(){
+            //     $('.scrollTo-Btn').hover(function(){
+            //         $(this).css('color', self.setBackgroundColor)
+            //         $(this).css('background-color', self.setColor)
+            //     }, function(){
+            //         $(this).css('color', self.setColor)
+            //         $(this).css('background-color', self.setBackgroundColor)
+            //     })
+            // }, 500)    
         })
         if(window.innerWidth > 1024){
             this.menuSlideDirection = 'translate(0, 0)'
@@ -190,13 +190,13 @@ export default {
             }
         }
         
-        $('.linkOut a').hover(function(){
-            $(this).css('color', self.setLinkBackgroundColor)
-            $(this).css('background-color', self.setLinkColor)
-        }, function(){
-            $(this).css('color', self.setLinkColor)
-            $(this).css('background-color', self.setLinkBackgroundColor)
-        })
+        // $('.linkOut a').hover(function(){
+        //     $(this).css('color', self.setLinkBackgroundColor)
+        //     $(this).css('background-color', self.setLinkColor)
+        // }, function(){
+        //     $(this).css('color', self.setLinkColor)
+        //     $(this).css('background-color', self.setLinkBackgroundColor)
+        // })
         window.addEventListener('scroll', this.handleScroll);
     },    
 }
@@ -208,17 +208,21 @@ export default {
     .active {
         color: black;
     }
-}
-.linkOut a{
-    background-color: inherit;
-    color: inherit;
-    height: 60px;
-    padding: 0;
-    line-height: 60px;
-    font-size: 20px;
-    text-decoration: none;
-    display: block;
-    color: #b7b7b7;
+    a {
+        background-color: inherit;
+        color: inherit;
+        height: 60px;
+        padding: 0;
+        line-height: 60px;
+        font-size: 20px;
+        text-decoration: none;
+        display: block;
+        color: #b7b7b7;
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
 }
 .scrollTo-Btn{
     background-color: #FFFFFF;

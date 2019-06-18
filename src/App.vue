@@ -2,9 +2,6 @@
   <div id="app">
     <Indicator></Indicator>
     <HeadBar head-color="#fff" icon-color="#000">
-      <!-- <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect">高溫會殺人</a>
-      <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan">幫都市退燒</a>
-      <a href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad">新加坡綠化降溫</a> -->
       <a @click="handleGA('menu bar_main', 'M1_main')" href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect" target="_blank">高溫會殺人</a>
       <a  class="active" @click="handleGA('menu bar_main', 'M2_main')" href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan" target="_blank">幫都市退燒</a>
       <a @click="handleGA('menu bar_main', 'M3_main')" href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_abroad" target="_blank">新加坡綠化降溫</a>
@@ -260,7 +257,7 @@
         <div class="share">
           <div class="content">
             <div class="container">
-              <fb-comment  href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect/"></fb-comment>
+              <fb-comment  href="https://udn.com/upf/newmedia/2019_data/urban_heat_island_effect_solutions_taiwan/"></fb-comment>
             </div>
           </div>
         </div>
